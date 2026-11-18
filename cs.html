@@ -1317,6 +1317,30 @@ body.fx-pointer{cursor:auto!important}
 @media(max-width:640px){.discover-link-scene{height:206px!important;max-width:100%}.discover-source{width:49px;height:59px;padding-top:5px}.discover-source i{scale:.82}.discover-source small{font-size:7px!important}.discover-product-core{width:60px;height:60px}.discover-product-core span{font-size:23px!important}.discover-product-core small{font-size:6px!important}.source-one{left:1%}.source-three{right:1%}.source-six{left:-2%}.source-seven{right:-2%}.client-launch{padding:48px 18px 42px!important}.client-launch-options{flex-wrap:wrap!important;gap:8px!important}.client-launch-options>a{min-width:138px!important;padding:10px 14px!important}.client-launch-options>a.client-web-btn{min-width:100px!important}.client-launch-foot{grid-template-columns:1fr!important;gap:4px!important}.footer-address-hover-grid p:after{position:fixed;left:16px!important;right:16px!important;bottom:80px;width:auto;max-width:none}}
 @media(prefers-reduced-motion:reduce){.discover-product-core,.discover-pull-ring,.client-launch:before{animation:none!important}}
 
+
+/* Static milestone diagram, following the supplied alternating timeline reference. */
+.history-intro{max-width:850px;margin-bottom:26px}
+.history-intro h3{font-size:clamp(19px,2vw,27px);line-height:1.45;letter-spacing:-.035em;color:#292b2d}
+.history-intro h3 em{font-style:normal;color:#a99f00}
+.history-intro p{max-width:820px;font-size:13px;line-height:1.9;color:#70777d;margin-top:10px}
+.history-timeline-wrap{width:100%;overflow-x:auto;overflow-y:hidden;padding:4px 0 10px;scrollbar-width:thin;scrollbar-color:#d7d9d9 transparent}
+.history-timeline{position:relative;display:grid;grid-template-columns:repeat(6,minmax(145px,1fr));grid-template-rows:120px 120px;min-width:900px;align-items:center;isolation:isolate}
+.history-connector{position:absolute;z-index:-1;inset:0;width:100%;height:100%;overflow:visible}
+.history-item{height:100%;display:grid;grid-template-rows:1fr 1fr;justify-items:center;align-items:center;text-align:center;min-width:0}
+.history-year{grid-row:1;display:grid;place-items:center;width:92px;height:92px;border:1px dashed #c9cccd;border-radius:50%;position:relative;background:rgba(255,255,255,.82)}
+.history-year:before{content:"";position:absolute;inset:7px;border:6px solid #faee00;border-radius:50%}
+.history-year span{position:relative;z-index:1;font-size:25px;font-weight:950;letter-spacing:-.04em;color:#f0d900}
+.history-desc{grid-row:2;align-self:start;position:relative;max-width:100%;padding:8px 5px 0;color:#4d4d4d;font-size:13px;line-height:1.5}
+.history-desc:before{content:"";position:absolute;left:50%;top:-20px;width:1px;height:17px;border-left:1px dashed #c8cacc}
+.history-desc:after{content:"";position:absolute;left:calc(50% - 3px);top:-24px;width:7px;height:7px;border-radius:50%;background:#faee00}
+.history-desc b{font-weight:550}
+.history-desc p{font-size:12px;line-height:1.5;margin:2px 0 0;color:#555}
+.history-item:nth-child(even) .history-year{grid-row:2;align-self:start;margin-top:5px}
+.history-item:nth-child(even) .history-desc{grid-row:1;align-self:end;padding:0 5px 8px}
+.history-item:nth-child(even) .history-desc:before{top:auto;bottom:-20px}
+.history-item:nth-child(even) .history-desc:after{top:auto;bottom:-24px}
+@media(max-width:600px){.history-intro p{font-size:12px}.history-timeline{min-width:900px}}
+
 </style>
 <style id="woowu-natural-marquee-refine">
 /* Partner area: normal document flow, never pinned to the user's scroll. */
@@ -1966,17 +1990,10 @@ img,svg,video{max-width:100%}
   .client-launch .client-launch-foot span{text-align:center !important}
 }
 
-/* Milestone timeline refresh */
+/* Timeline heading refinement */
 .growth-heading-clean{margin-bottom:24px}
 .growth-heading-clean h3{font-size:clamp(23px,3vw,34px);letter-spacing:-.04em;margin:0 0 8px}
 .growth-heading-clean p{max-width:650px;color:#75808b;font-size:12px;line-height:1.8;margin:0}
-.milestone-card{display:flex;flex-direction:column;gap:10px;min-height:310px!important;padding:16px!important}
-.milestone-card>img{display:block;width:100%;height:112px;object-fit:cover;border-radius:9px;background:#f0f1f2}
-.milestone-card .milestone-card-body{flex:1}
-.milestone-card .milestone-card-body>b{display:block;font-size:14px;line-height:1.5;margin:0 0 5px}
-.milestone-card .milestone-card-body>p{font-size:10px;line-height:1.75;color:#68737e;margin:0}
-.milestone-card .timeline-tag{align-self:flex-start;margin-top:auto}
-@media(max-width:600px){.milestone-card{min-height:285px!important}.milestone-card>img{height:105px}}
 </style>
 </head>
 <body>
@@ -2308,18 +2325,24 @@ img,svg,video{max-width:100%}
 </article>
 <article class="about-panel about-growth-panel" data-about-panel="4" id="about-growth">
 <div class="about-panel-top"><span>04 / PLATFORM DEVELOPMENT</span><i>服务 · 技术 · 生态</i></div>
-<div class="about-panel-heading growth-heading-clean"><h3>挖物发展历程</h3><p>从公司成立、自主研发，到平台建设、AI 营销上线与选品商城推进，记录每一个关键阶段。</p></div>
-<div class="platform-timeline-wrap" data-platform-timeline aria-label="挖物平台发展时间线自动轮播">
-<div class="platform-timeline-track">
-<article class="platform-timeline-card milestone-card"><small>2018 · COMPANY</small><div class="milestone-card-body"><b>数字科技有限公司成立</b><p>开启传媒内容与电商服务领域的长期积累。</p></div><span class="timeline-tag">企业创立</span></article>
-<article class="platform-timeline-card milestone-card"><small>2019 · R&amp;D</small><img src="https://www.woowuclub.com/assets/2019-287jMO7L.png" alt="2019 年挖物 AI 营销平台研发资料" loading="lazy"/><div class="milestone-card-body"><b>9月9日，自主立项</b><p>投入研发 WOOWU 挖物 AI 营销平台。</p></div><span class="timeline-tag">自主研发</span></article>
-<article class="platform-timeline-card milestone-card"><small>2022 · PLATFORM</small><img src="https://www.woowuclub.com/assets/2022-ICeCJ5j-.png" alt="2022 年挖物电商平台建设资料" loading="lazy"/><div class="milestone-card-body"><b>10月9日，WOOWU 挖物电商平台</b><p>进入生态功能板块构建。</p></div><span class="timeline-tag">平台建设</span></article>
-<article class="platform-timeline-card milestone-card"><small>2023 · INTERNAL TEST</small><img src="https://www.woowuclub.com/assets/2023-T2MVYAvc.png" alt="2023 年挖物平台生态内测资料" loading="lazy"/><div class="milestone-card-body"><b>WOOWU 挖物平台</b><p>进行生态内测。</p></div><span class="timeline-tag">生态内测</span></article>
-<article class="platform-timeline-card milestone-card"><small>2024 · AI MARKETING</small><img src="https://www.woowuclub.com/assets/2024-Z1Jn6-VN.png" alt="2024 年挖物 AI 营销功能资料" loading="lazy"/><div class="milestone-card-body"><b>挖物 AI 营销功能上线</b><p>将 AI 创作能力引入电商内容生产场景。</p></div><span class="timeline-tag">功能上线</span></article>
-<article class="platform-timeline-card milestone-card"><small>ECOSYSTEM · COMMERCE</small><div class="milestone-card-body"><b>挖物选品商城搭建</b><p>构建、跑通 AI 赋能，探索数据驱动与交易增量的平台价值闭环。</p></div><span class="timeline-tag">商品与生态</span></article>
+<div class="about-panel-heading growth-heading-clean history-intro">
+<h3>从服务基建到生态商业变现，<em>持续推进平台模式闭环。</em></h3>
+<p>从真实项目服务积累开始，逐步建设平台、沉淀商品与内容数据，再把 AI 创作能力和商品推广场景连接起来。每个阶段都对应具体能力建设，而不是脱离业务的技术概念。</p>
+</div>
+<div class="history-timeline-wrap" aria-label="挖物平台发展历程">
+<div class="history-timeline">
+<svg class="history-connector" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true"><polyline points="100,60 300,180 500,60 700,180 900,60 1100,180 1200,120" fill="none" stroke="#bfc2c4" stroke-width="1.2" stroke-dasharray="3 4"/></svg>
+<div class="history-item"><div class="history-year"><span>2018</span></div><div class="history-desc"><b>福建星美夸克<br/>数字科技有限公司成立</b></div></div>
+<div class="history-item"><div class="history-year"><span>2019</span></div><div class="history-desc"><b>9月9日，自主立项</b><p>投入研发 WOOWU 挖物<br/>AI 营销平台</p></div></div>
+<div class="history-item"><div class="history-year"><span>2022</span></div><div class="history-desc"><b>10月9日，WOOWU 挖物电商平台</b><p>进入生态功能板块构建</p></div></div>
+<div class="history-item"><div class="history-year"><span>2023</span></div><div class="history-desc"><b>WOOWU 挖物平台</b><p>进行生态内测</p></div></div>
+<div class="history-item"><div class="history-year"><span>2024</span></div><div class="history-desc"><b>挖物 AI 营销功能上线</b><p>将 AI 创作能力引入电商内容生产场景</p></div></div>
+<div class="history-item"><div class="history-year"><span>2025</span></div><div class="history-desc"><b>挖物选品商城搭建</b><p>构建跑通 AI 赋能、数据驱动<br/>与交易增量的平台价值闭环</p></div></div>
 </div>
 </div>
-<div class="timeline-autoplay-meta" aria-hidden="true"><span>WOOWU · MILESTONES</span><div class="timeline-autoplay-progress"><i></i></div><span>一路积累 · 持续进化</span></div>
+</article>
+</div>
+</div>
 </article>
 </div>
 </div>
@@ -2509,43 +2532,6 @@ document.querySelectorAll('.eco-card,.time-content').forEach(card=>card.addEvent
 })();
 </script>
 <script id="woowu-photo-carousel-script">
-
-// Platform development timeline: automatic, seamless carousel; pauses on hover/focus and for reduced-motion preferences.
-document.querySelectorAll('[data-platform-timeline]').forEach(viewport=>{
- const track=viewport.querySelector('.platform-timeline-track');
- const progress=viewport.parentElement.querySelector('.timeline-autoplay-progress i');
- if(!track)return;
- const originals=[...track.children];if(originals.length<2)return;
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
- let index=0,timer=null,raf=null,started=0,paused=false,step=0,visible=1;
- const measure=()=>{
-  const first=originals[0],second=originals[1];if(!first||!second)return;
-  step=second.offsetLeft-first.offsetLeft;
-  visible=Math.max(1,Math.ceil(viewport.clientWidth/Math.max(1,step)));
-  track.querySelectorAll('[data-timeline-clone]').forEach(el=>el.remove());
-  originals.slice(0,Math.min(visible+1,originals.length)).forEach(card=>{const clone=card.cloneNode(true);clone.setAttribute('data-timeline-clone','');clone.setAttribute('aria-hidden','true');track.appendChild(clone)});
-  index=0;track.style.transition='none';track.style.transform='translate3d(0,0,0)';
-  originals.forEach((card,i)=>card.classList.toggle('is-current',i===0));
-  requestAnimationFrame(()=>{track.style.transition='';});
- };
- const paintProgress=()=>{if(!progress)return;const elapsed=Math.min(1,(performance.now()-started)/4300);progress.style.width=(elapsed*100)+'%';if(elapsed<1&&!paused)raf=requestAnimationFrame(paintProgress)};
- const advance=()=>{
-  if(paused||reduce.matches||document.hidden)return;
-  index++;
-  track.style.transition='transform .75s cubic-bezier(.22,.75,.25,1)';
-  track.style.transform=`translate3d(${-index*step}px,0,0)`;
-  originals.forEach((card,i)=>card.classList.toggle('is-current',i===index%originals.length));
-  if(index>=originals.length){setTimeout(()=>{track.style.transition='none';index=0;track.style.transform='translate3d(0,0,0)';originals.forEach((card,i)=>card.classList.toggle('is-current',i===0));requestAnimationFrame(()=>{track.style.transition=''});},800)}
-  startCycle();
- };
- const startCycle=()=>{clearTimeout(timer);cancelAnimationFrame(raf);if(paused||reduce.matches)return;started=performance.now();if(progress)progress.style.width='0%';raf=requestAnimationFrame(paintProgress);timer=setTimeout(advance,4300)};
- const pauseForBackground=()=>{paused=true;clearTimeout(timer);cancelAnimationFrame(raf)};
- const resumeInForeground=()=>{if(reduce.matches)return;paused=false;startCycle()};
- document.addEventListener('visibilitychange',()=>document.hidden?pauseForBackground():resumeInForeground());
- if(reduce.addEventListener)reduce.addEventListener('change',()=>reduce.matches?pauseForBackground():resumeInForeground());
- measure();if(!reduce.matches)startCycle();
- let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{measure();startCycle()},160)},{passive:true});
-});
 
 // Three-image service carousel: auto-advances, with direct dot navigation.
 document.querySelectorAll('[data-photo-carousel]').forEach(carousel=>{
