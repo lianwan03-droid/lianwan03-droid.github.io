@@ -1965,6 +1965,18 @@ img,svg,video{max-width:100%}
   .client-launch .client-launch-foot{margin-top:10px !important;gap:5px !important}
   .client-launch .client-launch-foot span{text-align:center !important}
 }
+
+/* Milestone timeline refresh */
+.growth-heading-clean{margin-bottom:24px}
+.growth-heading-clean h3{font-size:clamp(23px,3vw,34px);letter-spacing:-.04em;margin:0 0 8px}
+.growth-heading-clean p{max-width:650px;color:#75808b;font-size:12px;line-height:1.8;margin:0}
+.milestone-card{display:flex;flex-direction:column;gap:10px;min-height:310px!important;padding:16px!important}
+.milestone-card>img{display:block;width:100%;height:112px;object-fit:cover;border-radius:9px;background:#f0f1f2}
+.milestone-card .milestone-card-body{flex:1}
+.milestone-card .milestone-card-body>b{display:block;font-size:14px;line-height:1.5;margin:0 0 5px}
+.milestone-card .milestone-card-body>p{font-size:10px;line-height:1.75;color:#68737e;margin:0}
+.milestone-card .timeline-tag{align-self:flex-start;margin-top:auto}
+@media(max-width:600px){.milestone-card{min-height:285px!important}.milestone-card>img{height:105px}}
 </style>
 </head>
 <body>
@@ -2238,13 +2250,6 @@ img,svg,video{max-width:100%}
 <p class="about-statement">挖物 WOOWU，是福建星美夸克数字科技有限公司旗下的 <em>AI 全域电商服务平台。</em></p>
 <p>挖物垂直服务电商行业，以 M2B2C 为业务协同模式，面向源头工厂、品牌方、生态服务商、中小商家、个人卖家与内容创作者，提供电商服务、AI 营销工具、商品供给与推广协作等专业能力。从服务、工具到货源，逐步连接电商经营中的不同角色与环节。</p>
 </div>
-<div class="about-platform-pillars">
-<article><span>01 / E-COMMERCE SERVICE</span><b>电商专业服务</b><p>商品拍摄、短视频制作、视觉设计、企业宣传与探厂影像，并可按项目需要延展品牌策划、运营陪跑及经营配套。</p></article>
-<article><span>02 / AI MARKETING</span><b>AI 营销创作</b><p>围绕商品主图、详情视觉、商品视频与营销内容，提供 Agent、AI 生图、AI 视频和 Canvas 创作工具。</p></article>
-<article><span>03 / PRODUCT COMMERCE</span><b>选品与商品连接</b><p>连接源头工厂、优质商品、商家与内容创作者，围绕选品、供给、分销和推广合作拓展商品触达路径。</p></article>
-</div>
-<div class="about-platform-bottom"><p>以专业服务沉淀产业需求，以 AI 技术提升内容生产效率，以商品与数据连接多端资源。挖物坚持“内容为基础、运营强能力、技术创驱动、贸易造价值”的发展方向，持续探索 AI 驱动的全域电商协作生态。</p>
-<div class="about-keywords"><span>AI全域电商服务</span><span>M2B2C协作模式</span><span>源头工厂赋能</span><span>品牌共创</span><span>电商内容生产</span><span>AI营销工作流</span><span>达人选品分销</span><span>跨境电商服务</span><span>商品数据洞察</span></div></div>
 <div class="founder-inline founder-inline-clean">
 <img alt="挖物创始人孙丽" loading="lazy" src="img/founder-sunli.webp" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"/>
 <div class="founder-inline-copy"><small>FOUNDER · CEO</small><b>孙丽 <span>创始人 · 实际控制人 · 挖物平台 CEO</span></b>
@@ -2262,20 +2267,7 @@ img,svg,video{max-width:100%}
 <article class="mbc-role-card mbc-role-c"><img alt="内容创作者与商品展示" loading="lazy" src="https://cdn.prod.website-files.com/5e73b0054b9d003622f5c43e/6285fca9a513c113146750ea_Womenswear-ecommerce-photography-LRP-A-2.jpg"/><div class="mbc-role-overlay"><small>C · CREATION</small><b>内容推广</b><strong>个人卖家 / 达人 / 创作者</strong><p>借助 AI 创作工具和选品资源，制作商品内容、参与推广合作，让更多创作者进入商品流通链路。</p><span>AI 创作　内容种草　选品分销</span></div></article>
 </div>
 <div class="mbc-loop-banner"><span>FROM SUPPLY TO MARKET</span><b>商品进入平台</b><i>→</i><b>服务与内容生产</b><i>→</i><b>多端经营推广</b><i>→</i><b>数据反馈回流</b><em>↺</em></div>
-<div class="mbc-workflow-heading"><div><small>THE COMMERCE WORKFLOW</small><h4>一件商品，如何走向更多市场？</h4></div><p>把抽象的“生态协同”拆成具体动作：从商品资料整理，到内容生产、渠道合作，再回到经营反馈。</p></div>
-<div class="mbc-workflow-grid">
-<article><span>01</span><div class="workflow-icon">01</div><b>商品入池</b><p>收集产品规格、供货能力、价格区间、适用场景与基础素材，建立商品信息档案。</p></article>
-<article><span>02</span><div class="workflow-icon">02</div><b>商品诊断</b><p>梳理核心卖点、目标客群、竞争差异和内容切入点，明确先表达什么、面向谁表达。</p></article>
-<article><span>03</span><div class="workflow-icon">03</div><b>专业服务</b><p>按项目需要提供商品拍摄、主图详情设计、短视频、探厂影像与品牌内容制作。</p></article>
-<article><span>04</span><div class="workflow-icon">04</div><b>AI 内容生产</b><p>使用 Agent、AI 生图、AI 视频与 Canvas，延展商品视觉、场景图、营销文案和视频素材。</p></article>
-<article><span>05</span><div class="workflow-icon">05</div><b>经营与推广</b><p>B 端商家和服务伙伴承接经营、渠道及交付；C 端创作者按开放的选品与合作机制参与推广。</p></article>
-<article><span>06</span><div class="workflow-icon">06</div><b>反馈与迭代</b><p>结合商品点击、内容表现、成交及售后反馈，持续优化商品表达、内容方向与合作方式。</p></article>
-</div>
-<div class="mbc-platform-role"><div class="mbc-platform-role-title"><small>WOOWU · PLATFORM ROLE</small><b>挖物在链路中，提供四层支撑。</b><p>以当前电商服务能力为起点，逐步叠加 AI 创作、商品连接和数据协作。</p></div>
-<div class="mbc-layer-grid"><article><i>01</i><b>专业服务网络</b><p>商品拍摄、设计、视频制作、品牌策划、运营陪跑与本地化项目交付。</p></article><article><i>02</i><b>AI 内容工作台</b><p>Agent、AI 生图、AI 视频与 Canvas，覆盖商品图文和视频创作场景。</p></article><article><i>03</i><b>商品与供给连接</b><p>源头商品展示、选品入口、零售批发及推广合作场景。</p></article><article><i>04</i><b>经营数据协同</b><p>围绕商品、内容和经营反馈沉淀信息，为后续决策与迭代提供参考。</p></article></div>
-</div>
-<div class="mbc-value-footer"><b>让工厂的好商品，被看见；让专业服务有连接；让创作者有机会参与。</b><span>挖物 AI · 让多端深度参与电商增量价值的共享。</span></div>
-<p class="mbc-footnote">说明：当前以电商服务为主要业务基础；AI 营销仍在持续推广与验证，选品分销、品牌共创及多端数据协同按阶段推进。商业模式设计不代表所有环节已全面打通，具体以平台实际开放和项目约定为准。</p></article>
+</article>
 <article class="about-panel about-partners-panel" data-about-panel="3" id="about-partners">
 <div class="about-panel-top"><span>03 / INDUSTRY COLLABORATION</span><i>产业协作 · 合作伙伴</i></div>
 <div class="partner-head reveal">
@@ -2316,20 +2308,16 @@ img,svg,video{max-width:100%}
 </article>
 <article class="about-panel about-growth-panel" data-about-panel="4" id="about-growth">
 <div class="about-panel-top"><span>04 / PLATFORM DEVELOPMENT</span><i>服务 · 技术 · 生态</i></div>
-<div class="about-panel-heading"><h3>从服务基建到生态商业变现，<em>持续推进平台模式闭环。</em></h3><p>从真实项目服务积累开始，逐步建设平台、沉淀商品与内容数据，再把 AI 创作能力和商品推广场景连接起来。每个阶段都对应具体能力建设，而不是脱离业务的技术概念。</p></div>
-<div class="timeline-visual-triptych">
-<article><img alt="专业电商服务拍摄" loading="lazy" src="https://images.microcms-assets.io/assets/cd6dd415b2ad4bf696762e3d907dd00b/1116323d3397463b8f59ca7bbc07d37e/%E5%BA%83%E5%91%8A%E9%81%8B%E7%94%A81.jpg"/><span><small>01 · FOUNDATION</small><b>服务基建</b><em>专业团队 · 影像交付 · 产业服务</em></span></article>
-<article><img alt="AI 商品创意内容" loading="lazy" src="https://www.apohem.se/cdn-cgi/image/width%3D414%2Cformat%3Dauto/contentassets/6104e81c4bcc42128757c99ae5cb3c15/m-hero-1080x1080-beauty-weeks-v.14-15.jpg"/><span><small>02 · TECHNOLOGY</small><b>AI 技术跃升</b><em>商品素材 · Agent 工作流 · 内容生产</em></span></article>
-<article><img alt="电商履约与商品协作" loading="lazy" src="https://gunpowdr.com/featured-030626-54.webp"/><span><small>03 · ECOSYSTEM</small><b>生态商业协作</b><em>源头货盘 · 经营渠道 · 创作者推广</em></span></article>
-</div><div class="growth-journey-labels"><span>服务基建 <b>→</b></span><span>AI 技术跃升 <b>→</b></span><span>生态商业变现</span></div>
+<div class="about-panel-heading growth-heading-clean"><h3>挖物发展历程</h3><p>从公司成立、自主研发，到平台建设、AI 营销上线与选品商城推进，记录每一个关键阶段。</p></div>
 <div class="platform-timeline-wrap" data-platform-timeline aria-label="挖物平台发展时间线自动轮播">
-<div class="platform-timeline-track"><article class="platform-timeline-card"><small>2018 · COMPANY</small><b>公司成立</b><p>福建星美夸克数字科技有限公司成立，开启传媒内容与电商服务领域的长期积累。</p><span class="timeline-tag">企业创立</span></article>
-<article class="platform-timeline-card"><small>2019 · R&amp;D</small><b>AI 平台研发立项</b><p>9 月启动 WOOWU 挖物 AI 营销平台研发，探索技术与电商场景的结合。</p><span class="timeline-tag">技术研发</span></article>
-<article class="platform-timeline-card"><small>2022 · PLATFORM</small><b>生态功能构建</b><p>挖物电商平台进入生态功能板块构建阶段，为服务、技术与商品连接做平台准备。</p><span class="timeline-tag">平台搭建</span></article>
-<article class="platform-timeline-card"><small>2023 · DATA FOUNDATION</small><b>平台内测与数据库建设</b><p>开展平台生态内测，启动素材数据库研发与平台搭建，持续沉淀电商场景内容与数据基础。</p><span class="timeline-tag">平台与数据</span></article>
-<article class="platform-timeline-card"><small>2023—2025 · SERVICE</small><b>电商服务体系建设</b><p>围绕商品影像、企业宣推、视觉设计与运营陪跑，完善服务流程和产业带本地化交付；2024 年 AI 营销功能上线。</p><span class="timeline-tag">服务基建</span></article>
-<article class="platform-timeline-card"><small>2025—2026 · AI AGENT</small><b>AI Agent 工作流升级</b><p>从单点创作工具向 Agent 工作流升级，衔接商品素材输入、需求理解、创意组织与内容输出。</p><span class="timeline-tag">技术跃升</span></article>
-<article class="platform-timeline-card"><small>2025—2026 · COMMERCE</small><b>选品商城与生态协作</b><p>推进选品商城建设，探索源头货盘、AI 内容与创作者推广场景之间的连接方式。</p><span class="timeline-tag">商品与分销</span></article></div>
+<div class="platform-timeline-track">
+<article class="platform-timeline-card milestone-card"><small>2018 · COMPANY</small><div class="milestone-card-body"><b>数字科技有限公司成立</b><p>开启传媒内容与电商服务领域的长期积累。</p></div><span class="timeline-tag">企业创立</span></article>
+<article class="platform-timeline-card milestone-card"><small>2019 · R&amp;D</small><img src="https://www.woowuclub.com/assets/2019-287jMO7L.png" alt="2019 年挖物 AI 营销平台研发资料" loading="lazy"/><div class="milestone-card-body"><b>9月9日，自主立项</b><p>投入研发 WOOWU 挖物 AI 营销平台。</p></div><span class="timeline-tag">自主研发</span></article>
+<article class="platform-timeline-card milestone-card"><small>2022 · PLATFORM</small><img src="https://www.woowuclub.com/assets/2022-ICeCJ5j-.png" alt="2022 年挖物电商平台建设资料" loading="lazy"/><div class="milestone-card-body"><b>10月9日，WOOWU 挖物电商平台</b><p>进入生态功能板块构建。</p></div><span class="timeline-tag">平台建设</span></article>
+<article class="platform-timeline-card milestone-card"><small>2023 · INTERNAL TEST</small><img src="https://www.woowuclub.com/assets/2023-T2MVYAvc.png" alt="2023 年挖物平台生态内测资料" loading="lazy"/><div class="milestone-card-body"><b>WOOWU 挖物平台</b><p>进行生态内测。</p></div><span class="timeline-tag">生态内测</span></article>
+<article class="platform-timeline-card milestone-card"><small>2024 · AI MARKETING</small><img src="https://www.woowuclub.com/assets/2024-Z1Jn6-VN.png" alt="2024 年挖物 AI 营销功能资料" loading="lazy"/><div class="milestone-card-body"><b>挖物 AI 营销功能上线</b><p>将 AI 创作能力引入电商内容生产场景。</p></div><span class="timeline-tag">功能上线</span></article>
+<article class="platform-timeline-card milestone-card"><small>ECOSYSTEM · COMMERCE</small><div class="milestone-card-body"><b>挖物选品商城搭建</b><p>构建、跑通 AI 赋能，探索数据驱动与交易增量的平台价值闭环。</p></div><span class="timeline-tag">商品与生态</span></article>
+</div>
 </div>
 <div class="timeline-autoplay-meta" aria-hidden="true"><span>WOOWU · MILESTONES</span><div class="timeline-autoplay-progress"><i></i></div><span>一路积累 · 持续进化</span></div>
 </article>
