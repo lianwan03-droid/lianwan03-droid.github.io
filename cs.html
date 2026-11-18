@@ -6,8 +6,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <meta content="#17191d" name="theme-color"/>
-<meta content="挖物 WOOWU 是福建星美夸克数字科技有限公司旗下 AI 全域电商服务平台，采用 M2B2C 平台协同模式，提供电商服务、AI营销工具、商品选品与分销连接，服务源头工厂、品牌、生态服务商、商家、个人卖家与内容创作者。" name="description"/>
-<title>挖物 WOOWU｜电商服务 · AI营销 · 选品商城</title>
+<meta content="挖物 WOOWU 是福建星美夸克数字科技有限公司旗下的一站式电商服务平台，以电商服务、AI营销、选品商城三项能力，连接商品内容、智能创作与源头供给。" name="description"/>
+<title>挖物 WOOWU｜一站式电商服务平台 · 电商服务 · AI营销 · 选品商城</title>
 <style>
 :root{
   --graphite:#1f2022; --deep:#151719; --ink:#202329; --muted:#69717d;
@@ -267,6 +267,51 @@ img{display:block;max-width:100%}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}
 .back-top{position:fixed;z-index:800;right:25px;bottom:25px;width:46px;height:46px;border-radius:50%;border:0;background:var(--yellow);color:var(--deep);font-size:18px;box-shadow:0 12px 30px rgba(21,23,25,.18);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .35s var(--spring)}.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* About chapter rail: dedicated grid column, never overlays the article */
+.about-layout{grid-template-columns:minmax(190px,215px) minmax(0,1fr);column-gap:clamp(24px,3.2vw,48px);align-items:start}
+.about-rail{width:100%;box-sizing:border-box;z-index:2;max-height:calc(100vh - 145px);overflow-y:auto;overscroll-behavior:contain}
+.about-story{min-width:0;width:100%;}
+.about-rail-links a{white-space:normal;line-height:1.35}
+.about-partners-panel .partner-panel-intro{position:relative;z-index:1;max-width:760px;margin:5px 0 30px}
+.about-partners-panel .partner-panel-intro .eyebrow{margin-bottom:12px}
+.about-partners-panel .partner-panel-intro h3{margin:0;font-size:clamp(28px,3.2vw,43px);line-height:1.18;letter-spacing:-.045em;color:#202329}
+.about-partners-panel .partner-panel-intro h3 em{font-style:normal;color:#8a8f96}
+.about-partners-panel .partner-panel-intro p{max-width:650px;margin:15px 0 0;color:#747d87;font-size:14px;line-height:1.9}
+.about-partners-panel .partner-head{display:none}
+.about-partners-panel .partner-marquee{margin-top:0}
+.about-partners-panel .partner-simple-note{margin-top:20px}
+/* Product-to-market micro film: a layered HTML scene rather than a static line diagram */
+.art-connect{position:relative;min-height:260px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:radial-gradient(ellipse at 52% 48%,rgba(250,238,0,.13),transparent 37%),linear-gradient(135deg,#25282b 0%,#111315 72%);box-shadow:0 24px 65px rgba(10,14,18,.2);isolation:isolate}
+.art-connect:before{content:"";position:absolute;inset:-30%;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.035) 39px 40px);transform:translateX(-8%);animation:marketGrid 16s linear infinite;z-index:-1}
+.market-scene-top{position:absolute;left:22px;right:22px;top:18px;display:flex;justify-content:space-between;align-items:center;color:#aeb4ba;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.market-live{display:inline-flex;align-items:center;gap:7px}.market-live i{width:6px;height:6px;border-radius:50%;background:#faee00;box-shadow:0 0 12px #faee00;animation:liveBlink 1.4s infinite}
+.market-stage{position:absolute;inset:55px 18px 22px;display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:center;gap:10px}
+.market-product-card,.market-content-card,.market-channel-stack{position:relative;border:1px solid rgba(255,255,255,.15);background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045));backdrop-filter:blur(10px);box-shadow:0 16px 35px rgba(0,0,0,.22)}
+.market-product-card{height:126px;border-radius:15px;padding:12px;animation:productFloat 4s ease-in-out infinite}
+.market-product-visual{height:72px;border-radius:10px;background:radial-gradient(circle at 50% 30%,#fff8a6 0 4%,transparent 5%),linear-gradient(135deg,#777b7e,#262a2d);display:grid;place-items:center;overflow:hidden;position:relative}
+.market-product-visual:before{content:"";width:33px;height:48px;border-radius:8px 8px 12px 12px;background:linear-gradient(90deg,#c7c9c7,#f1eee4 48%,#9fa4a4);box-shadow:0 9px 18px #0008;transform:rotate(-9deg)}
+.market-product-visual:after{content:"";position:absolute;width:80px;height:80px;border:1px solid rgba(250,238,0,.35);border-radius:50%;animation:productHalo 5s linear infinite}
+.market-card-caption{display:flex;justify-content:space-between;align-items:center;margin-top:9px;color:#f2f1e9;font-size:9px}.market-card-caption b{color:#faee00;font-size:8px;letter-spacing:.08em}
+.market-content-card{min-height:155px;border-radius:18px;padding:12px;transform:translateY(-4px);animation:contentLift 4.5s ease-in-out infinite}
+.market-content-head{display:flex;align-items:center;justify-content:space-between;color:#dce0e1;font-size:8px;letter-spacing:.1em}.market-content-preview{height:83px;margin-top:10px;border-radius:11px;position:relative;overflow:hidden;background:linear-gradient(130deg,#e9e3d3 0 42%,#b7b2a4 43% 58%,#34383a 59%)}
+.market-content-preview:before{content:"";position:absolute;width:48px;height:64px;left:calc(50% - 24px);top:12px;border-radius:9px;background:linear-gradient(90deg,#c4c7c2,#f4f0e4 50%,#8b9290);box-shadow:0 8px 20px #0005;transform:rotate(8deg)}
+.market-content-preview:after{content:"AI CREATIVE";position:absolute;left:9px;bottom:8px;color:#1e2224;font-size:8px;font-weight:900;letter-spacing:.12em}
+.market-content-foot{display:flex;gap:5px;margin-top:9px}.market-content-foot i{height:4px;border-radius:8px;background:#faee00;opacity:.85}.market-content-foot i:nth-child(1){width:42%}.market-content-foot i:nth-child(2){width:25%;opacity:.45}.market-content-foot i:nth-child(3){width:15%;opacity:.25}
+.market-channel-stack{height:126px;border-radius:15px;padding:11px;display:grid;align-content:center;gap:8px;animation:channelFloat 4.2s ease-in-out infinite}
+.market-channel{display:flex;align-items:center;gap:7px;color:#e9ebeb;font-size:8px}.market-channel i{width:22px;height:22px;display:grid;place-items:center;border-radius:7px;background:rgba(250,238,0,.13);color:#faee00;font-style:normal;font-size:10px}
+.market-flow{position:absolute;left:20%;right:20%;top:50%;height:1px;background:linear-gradient(90deg,transparent,#faee00,transparent);opacity:.65;z-index:-1}.market-flow:after{content:"";position:absolute;left:0;top:-2px;width:5px;height:5px;border-radius:50%;background:#faee00;box-shadow:0 0 12px #faee00;animation:flowTravel 3.2s linear infinite}
+.market-caption{position:absolute;left:22px;bottom:12px;color:#92999f;font-size:8px;letter-spacing:.1em}.market-caption b{color:#faee00;font-weight:700}
+@keyframes marketGrid{to{transform:translateX(8%)}}
+@keyframes liveBlink{50%{opacity:.35;box-shadow:0 0 2px #faee00}}
+@keyframes productFloat{50%{transform:translateY(-7px) rotate(-1deg)}}
+@keyframes contentLift{50%{transform:translateY(-11px) scale(1.015)}}
+@keyframes channelFloat{50%{transform:translateY(-6px)}}
+@keyframes productHalo{to{transform:rotate(360deg) scale(1.12)}}
+@keyframes flowTravel{to{left:100%}}
+@media(max-width:800px){.about-layout{grid-template-columns:minmax(0,1fr)}.about-rail{position:relative;top:auto;max-height:none;overflow:visible}.about-rail-links{grid-template-columns:repeat(4,minmax(0,1fr));gap:3px}.about-rail-links a{flex-direction:column;justify-content:center;gap:5px;min-height:58px;font-size:9px;text-align:center;padding:5px 1px}.about-rail-track{display:none}.about-partners-panel .partner-panel-intro h3{font-size:30px}.art-connect{min-height:230px}.market-stage{inset:52px 10px 22px;gap:6px}.market-product-card,.market-channel-stack{padding:8px;height:112px}.market-content-card{padding:8px;min-height:135px}.market-product-visual{height:62px}.market-content-preview{height:70px}.market-channel{font-size:7px;gap:4px}.market-channel i{width:18px;height:18px}}
+@media(prefers-reduced-motion:reduce){.art-connect:before,.market-live i,.market-product-card,.market-product-visual:after,.market-content-card,.market-channel-stack,.market-flow:after{animation:none!important}}
+
 @media(max-width:1050px){.office-grid{grid-template-columns:repeat(3,1fr)}.partner-wall{grid-template-columns:repeat(4,1fr)}.detail-visual{min-height:410px}.footer-main{grid-template-columns:1.3fr 1fr 1fr;}.footer-brand{grid-column:1/-1}}
 @media(max-width:800px){
  .container{width:calc(100% - 40px)}.site-nav{height:72px}.nav-inner{width:calc(100% - 36px)}.brand img{width:120px}.nav-cta{display:none}.menu-toggle{display:grid;place-items:center}.nav-links{position:fixed;top:72px;left:0;right:0;display:flex;flex-direction:column;gap:0;padding:12px 20px 24px;background:rgba(22,25,29,.97);backdrop-filter:blur(24px);transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}.scrolled .nav-links{background:rgba(255,255,255,.97)}.nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}.nav-links a{width:100%;padding:16px 6px;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px}.scrolled .nav-links a{border-color:rgba(31,32,34,.08)}
@@ -951,6 +996,35 @@ body.fx-pointer .fx-cursor,body.fx-pointer .fx-cursor-core{opacity:1}
 .platform-timeline-card>b{display:block;font-size:14px;line-height:1.45;margin-bottom:8px}
 .platform-timeline-card>p{font-size:9px;line-height:1.85;color:#77818c;margin:0}
 .timeline-tag{display:inline-flex;margin-top:12px;padding:5px 8px;border-radius:99px;background:#f1f3f5;color:#7c8792;font-size:8px;font-weight:800}
+/* Refined AI creation CTA: keep the brand yellow as an accent, not a full-bright canvas. */
+.ai-try-card{border-color:rgba(31,32,34,.12);background:#f7f7f3;box-shadow:0 10px 28px rgba(31,32,34,.055);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.ai-try-card:hover{transform:translateY(-4px);border-color:rgba(190,178,0,.48);box-shadow:0 18px 38px rgba(31,32,34,.11)}
+.ai-try-visual{background:radial-gradient(circle at 86% 18%,rgba(250,238,0,.16),transparent 31%),linear-gradient(135deg,#343735,#25292a 70%,#30312b);color:#f4f3ed;position:relative;isolation:isolate;overflow:hidden}
+.ai-try-visual:after{content:"";position:absolute;right:-54px;bottom:-105px;width:230px;height:230px;border:1px solid rgba(250,238,0,.2);border-radius:50%;box-shadow:0 0 0 24px rgba(250,238,0,.035),0 0 0 50px rgba(250,238,0,.025);z-index:-1}
+.ai-try-visual span{color:rgba(250,238,0,.78)}
+.ai-try-visual b{color:#f5f4ef}
+.ai-try-visual b em{color:var(--yellow);text-shadow:none}
+.ai-try-visual i{color:rgba(255,255,255,.76)}
+.ai-try-card>div:last-child{background:#f7f7f3}
+/* Auto-playing development timeline: restrained motion, readable cards, no manual scrolling required. */
+.platform-timeline-wrap{overflow:hidden;position:relative;padding:12px 2px 18px;touch-action:pan-y}
+.platform-timeline-track{gap:14px;min-width:0;width:max-content;will-change:transform;transition:transform .75s cubic-bezier(.22,.75,.25,1);padding:20px 3px 8px}
+.platform-timeline-card{flex:0 0 clamp(250px,calc((min(100vw - 80px,1180px) - 28px)/3),360px);min-height:205px;padding:19px 18px 17px;overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.platform-timeline-card:after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--yellow);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease}
+.platform-timeline-card.is-current{border-color:rgba(190,178,0,.42);box-shadow:0 13px 30px rgba(25,35,46,.075)}
+.platform-timeline-card.is-current:after{transform:scaleY(1)}
+.platform-timeline-card:hover{transform:translateY(-5px);border-color:rgba(190,178,0,.55);box-shadow:0 18px 34px rgba(25,35,46,.1)}
+.platform-timeline-card small{font-size:9px;letter-spacing:.1em;color:#858e98}
+.platform-timeline-card>b{font-size:15px}
+.platform-timeline-card>p{font-size:10px;line-height:1.9;color:#68737e}
+.timeline-tag{font-size:9px}
+.timeline-autoplay-meta{display:flex;align-items:center;gap:12px;margin:3px 4px 0;color:#929aa3;font-size:9px}
+.timeline-autoplay-meta>span{white-space:nowrap}
+.timeline-autoplay-progress{height:2px;flex:1;background:#e7e9e9;border-radius:9px;overflow:hidden}
+.timeline-autoplay-progress i{display:block;width:0;height:100%;background:var(--yellow);transform-origin:left}
+@media(max-width:900px){.platform-timeline-card{flex-basis:clamp(250px,calc((100vw - 70px)/2),360px)}}
+@media(max-width:600px){.platform-timeline-card{flex-basis:82vw;min-height:190px;padding:17px 16px}.timeline-autoplay-meta{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.platform-timeline-track,.platform-timeline-card,.ai-try-card{transition:none!important}}
 /* Resource Center: grouped links first, visual showcase below the link buttons. */
 .resource-center{background:linear-gradient(135deg,#f3f6f8,#fbfcfd 52%,#edf1f4);overflow:hidden}
 .resource-center:before{content:"";position:absolute;right:-16%;top:-20%;width:58vw;height:58vw;border-radius:50%;background:radial-gradient(circle,rgba(250,238,0,.15),rgba(204,220,236,.2) 42%,transparent 70%);z-index:-1}
@@ -1064,6 +1138,184 @@ body.fx-pointer{cursor:auto!important}
  .hero-eco-step small{font-size:6px}
  .nav-resource-menu{grid-template-columns:1fr}
 }
+
+
+
+/* ===== DOCX 1117 CONTENT ALIGNMENT ===== */
+.proof-journey{padding:34px 0 38px;background:linear-gradient(110deg,#151719,#25282c 56%,#191b1e);color:#fff;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(250,238,0,.34)}
+.proof-journey .proof-label{color:rgba(255,255,255,.52);opacity:1}
+.proof-journey .proof-title{color:#fff}
+.proof-journey .proof-note{color:rgba(255,255,255,.62);opacity:1}
+.proof-journey-track{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;margin-top:20px;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:linear-gradient(100deg,rgba(255,255,255,.07),rgba(255,255,255,.025))}
+.proof-journey-step{display:flex;align-items:center;gap:13px;min-width:0}
+.proof-journey-step i{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:50%;background:var(--yellow);color:var(--deep);font-size:11px;font-style:normal;font-weight:950}
+.proof-journey-step b{display:block;color:#fff;font-size:13px;white-space:nowrap}
+.proof-journey-step span{display:block;color:rgba(255,255,255,.48);font-size:10px;white-space:nowrap}
+.proof-journey-track>em{color:var(--yellow);font-style:normal;font-size:18px}
+.download-highlight{display:block;color:var(--yellow)}
+.download-platforms{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.download-platform-card{display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:14px;min-height:104px;padding:20px 22px;border:1px solid rgba(255,255,255,.14);border-radius:15px;background:rgba(255,255,255,.065);backdrop-filter:blur(12px)}
+.platform-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--yellow);color:var(--deep);font-size:10px;font-weight:950;letter-spacing:.04em}
+.download-platform-card b{display:block;color:#fff;font-size:14px}
+.download-platform-card p{margin:5px 0 0;color:rgba(255,255,255,.55);font-size:11px;line-height:1.6}
+.download-platform-card>small{color:rgba(255,255,255,.36);font-size:9px;letter-spacing:.12em}
+.download-platform-card>a{color:var(--yellow);font-size:11px;font-weight:850;white-space:nowrap}
+@media(max-width:800px){
+ .proof-journey-track{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+ .proof-journey-track>em{display:none}
+ .download-platforms{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+ .proof-journey-track{grid-template-columns:1fr;padding:17px}
+ .proof-journey-step{gap:10px}
+ .download-platform-card{grid-template-columns:40px 1fr;gap:11px;padding:16px}
+ .download-platform-card>small,.download-platform-card>a{grid-column:2}
+}
+
+
+/* 2026-11-18 refinement pass */
+.proof-top{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);align-items:center;gap:clamp(24px,4vw,64px)}
+.proof-title-nowrap,.proof-note-nowrap{white-space:nowrap;word-break:keep-all;overflow:visible}
+.proof-title-nowrap{font-size:clamp(16px,1.65vw,23px);letter-spacing:-.035em}
+.proof-note-nowrap{font-size:clamp(10px,.88vw,12px);letter-spacing:-.025em;text-align:right}
+@media(max-width:900px){.proof-top{grid-template-columns:1fr;gap:10px}.proof-title-nowrap,.proof-note-nowrap{white-space:normal;text-align:left}.proof-title-nowrap{font-size:clamp(17px,3.6vw,22px)}}
+@media(min-width:901px) and (max-width:1180px){.proof-note-nowrap{font-size:10px;letter-spacing:-.055em}}
+/* The discovery illustration now tells one clear story: assorted supply is drawn toward WOOWU. */
+.discover-link-scene{height:184px;max-width:500px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 58%,rgba(250,238,0,.11),transparent 48%)}
+.discover-gridline{position:absolute;inset:8% 3%;opacity:.34;background-image:linear-gradient(rgba(31,32,34,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,32,34,.055) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse,#000 25%,transparent 78%)}
+.discover-source{position:absolute;z-index:2;width:54px;height:54px;border:1px solid rgba(31,32,34,.12);border-radius:13px;background:linear-gradient(145deg,#fff,#f0f2f3);box-shadow:0 8px 18px rgba(31,32,34,.08);display:grid;place-items:center;animation:sourceGather 6.8s ease-in-out infinite}
+.discover-source i{display:block;position:relative;width:21px;height:25px;border-radius:5px;background:linear-gradient(145deg,#d8dde1,#8e98a2);box-shadow:inset -4px -2px 0 rgba(31,32,34,.12)}
+.discover-source small{position:absolute;bottom:4px;font-size:7px;color:#747e88;font-weight:800}
+.source-one{left:8%;top:22%;animation-delay:0s}.source-two{left:25%;bottom:9%;animation-delay:-1.3s}.source-three{right:8%;top:22%;animation-delay:-2.6s}.source-four{right:25%;bottom:9%;animation-delay:-3.9s}.source-five{left:48%;top:2%;transform:translateX(-50%);animation-delay:-5.2s}
+.source-two i{width:27px;height:13px;border-radius:12px 5px 8px 5px}.source-three i{width:17px;height:24px;border-radius:4px}.source-four i{width:25px;height:20px;border-radius:4px}.source-five i{width:20px;height:23px;border-radius:50% 50% 5px 5px}
+.discover-product-core{position:absolute;z-index:7;left:50%;top:53%;width:62px;height:62px;transform:translate(-50%,-50%);border:2px solid #fff;border-radius:18px;background:linear-gradient(145deg,#faee00,#e5d900);box-shadow:0 0 0 7px rgba(250,238,0,.16),0 12px 28px rgba(31,32,34,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;animation:productFocus 3.6s ease-in-out infinite}
+.discover-product-core span{font-size:27px;font-weight:950;color:#202329;line-height:1}.discover-product-core small{font-size:6px;letter-spacing:.15em;color:rgba(31,32,34,.62);font-weight:900;margin-top:3px}
+.discover-claw-svg{position:absolute;z-index:6;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.claw-arm,.claw-link,.claw-tip{fill:none;stroke:url(#clawGold);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:url(#clawGlow)}
+.claw-arm{opacity:.22;stroke-width:9}.claw-link{stroke-width:3.5;stroke-dasharray:4 5;animation:clawDraw 3.4s ease-in-out infinite}.claw-tip{stroke-width:4.5;animation:clawGrip 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.claw-link-right{animation-delay:-1.7s}.claw-tip-right{animation-delay:-1.7s}
+.discover-pull-ring{position:absolute;z-index:3;left:50%;top:53%;width:105px;height:105px;border:1px solid rgba(250,238,0,.52);border-radius:50%;transform:translate(-50%,-50%);animation:pullPulse 3.4s ease-out infinite}
+@keyframes sourceGather{0%,100%{translate:0 0;scale:1}42%{translate:var(--pull-x,0) var(--pull-y,0);scale:.92}65%{translate:0 0;scale:1}}
+.source-one{--pull-x:14px;--pull-y:17px}.source-two{--pull-x:12px;--pull-y:-12px}.source-three{--pull-x:-14px;--pull-y:17px}.source-four{--pull-x:-12px;--pull-y:-12px}.source-five{--pull-x:0px;--pull-y:18px}
+@keyframes productFocus{0%,100%{box-shadow:0 0 0 7px rgba(250,238,0,.14),0 12px 28px rgba(31,32,34,.16)}50%{box-shadow:0 0 0 12px rgba(250,238,0,.2),0 15px 34px rgba(31,32,34,.2)}}
+@keyframes clawDraw{0%,100%{stroke-dashoffset:32;opacity:.48}45%,65%{stroke-dashoffset:0;opacity:1}}
+@keyframes clawGrip{0%,100%{translate:0 0}48%,62%{translate:0 5px}}
+@keyframes pullPulse{0%{scale:.72;opacity:0}35%{opacity:.7}100%{scale:1.45;opacity:0}}
+@media(prefers-reduced-motion:reduce){.discover-source,.discover-product-core,.claw-link,.claw-tip,.discover-pull-ring{animation:none!important}}
+/* Platform encyclopedia layout: clear definition, capability index, operating direction and founder profile. */
+.about-platform-panel{padding:clamp(24px,3vw,42px);background:linear-gradient(145deg,#fff 0%,#f7f8f9 72%,#f1f3f5 100%)}
+.about-platform-grid-clean{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.about-platform-copy{max-width:100%;padding:0 0 20px;border-bottom:1px solid rgba(31,32,34,.1)}
+.about-platform-copy h3{font-size:clamp(24px,3vw,36px);letter-spacing:-.045em;margin:4px 0 15px}
+.about-platform-copy .about-statement{max-width:980px;font-size:clamp(16px,1.7vw,21px);line-height:1.65;color:#30363d;font-weight:800}
+.about-platform-copy .about-statement em{font-style:normal;color:#8b7f00;box-shadow:inset 0 -.34em rgba(250,238,0,.35)}
+.about-platform-copy>p:last-child{max-width:1000px;font-size:13px;line-height:2;color:#69737e}
+.about-platform-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.about-platform-pillars article{position:relative;padding:19px 18px 17px;border:1px solid rgba(31,32,34,.09);border-radius:15px;background:linear-gradient(145deg,#fff,#f5f6f7);min-width:0;transition:transform .35s,border-color .35s,box-shadow .35s}
+.about-platform-pillars article:hover{transform:translateY(-4px);border-color:rgba(190,178,0,.5);box-shadow:0 14px 30px rgba(31,32,34,.07)}
+.about-platform-pillars article>span{display:block;font-size:8px;letter-spacing:.11em;color:#9aa1a9;font-weight:900;margin-bottom:10px}
+.about-platform-pillars article>b{display:block;font-size:16px;color:#252b32;margin-bottom:8px}
+.about-platform-pillars article>p{font-size:11px;line-height:1.9;color:#727c86;margin:0}
+.about-platform-bottom{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);gap:20px;align-items:center;padding:20px;border-radius:16px;background:linear-gradient(105deg,#22272d,#343a40);color:#fff}
+.about-platform-bottom>p{font-size:12px;line-height:2;color:rgba(255,255,255,.78);margin:0}
+.about-platform-bottom .about-keywords{display:flex;flex-wrap:wrap;gap:7px;margin:0}
+.about-platform-bottom .about-keywords span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#f0f1ee;padding:6px 9px;border-radius:99px;font-size:9px}
+.founder-inline-clean{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;align-items:center;margin-top:4px;padding:20px;border-radius:16px;background:#fff;border:1px solid rgba(31,32,34,.08)}
+.founder-inline-clean>img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:4px solid #f1f2f3;box-shadow:0 6px 18px rgba(31,32,34,.1)}
+.founder-inline-copy>small{display:block;color:#a0a7af;font-size:8px;font-weight:900;letter-spacing:.16em}
+.founder-inline-copy>b{display:block;font-size:20px;margin:3px 0 7px;color:#242a30}
+.founder-inline-copy>b span{font-size:10px;color:#818a94;font-weight:600;margin-left:8px}
+.founder-inline-copy p{font-size:10px;line-height:1.9;color:#747e88;margin:5px 0}
+.about-foundation-line{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;padding:17px 10px 0;color:#535d67;font-size:12px;font-weight:900;letter-spacing:.04em}
+.about-foundation-line i{width:22px;height:1px;background:linear-gradient(90deg,transparent,#c4b800,transparent)}
+@media(max-width:760px){.about-platform-pillars{grid-template-columns:1fr}.about-platform-bottom{grid-template-columns:1fr}.founder-inline-clean{grid-template-columns:64px minmax(0,1fr);padding:14px}.founder-inline-clean>img{width:64px;height:64px}.founder-inline-copy>b span{display:block;margin:3px 0 0}}
+/* Growth story: one calm hierarchy, three clear stages, then the automatically moving chronology. */
+.about-growth-panel{padding:clamp(22px,3vw,38px);background:linear-gradient(145deg,#fff,#f6f7f8)}
+.about-growth-panel .about-panel-heading{max-width:860px;margin:8px 0 22px}
+.about-growth-panel .about-panel-heading h3{font-size:clamp(23px,2.6vw,32px);line-height:1.35;letter-spacing:-.04em;margin:0 0 10px}
+.about-growth-panel .about-panel-heading h3 em{font-style:normal;color:#8d8100;box-shadow:inset 0 -.32em rgba(250,238,0,.36)}
+.about-growth-panel .about-panel-heading p{font-size:12px;line-height:1.95;color:#77818b;max-width:780px;margin:0}
+.timeline-visual-triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;overflow:hidden;border-radius:17px;background:#20252b;margin:22px 0 0}
+.timeline-visual-triptych article{position:relative;min-height:140px;border-right:1px solid rgba(255,255,255,.12);overflow:hidden}
+.timeline-visual-triptych article:last-child{border-right:0}
+.timeline-visual-triptych article:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,23,26,.86),rgba(20,23,26,.34) 70%,rgba(20,23,26,.12))}
+.timeline-visual-triptych img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.56;filter:saturate(.72)}
+.timeline-visual-triptych article>span{position:absolute;z-index:2;left:18px;bottom:16px;display:flex;flex-direction:column;gap:4px;color:#fff}
+.timeline-visual-triptych small{font-size:8px;letter-spacing:.14em;color:var(--yellow);font-weight:900}
+.timeline-visual-triptych b{font-size:18px}.timeline-visual-triptych em{font-style:normal;font-size:9px;color:rgba(255,255,255,.72)}
+.growth-journey-labels{display:none}
+.platform-timeline-wrap{margin-top:22px;padding:14px 2px 16px;border-top:1px solid rgba(31,32,34,.08)}
+.platform-timeline-card{background:#fff;border-color:rgba(31,32,34,.08);box-shadow:0 8px 24px rgba(31,32,34,.045)}
+@media(max-width:700px){.timeline-visual-triptych{grid-template-columns:1fr}.timeline-visual-triptych article{min-height:110px;border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}}
+/* Partner section: retain one heading and one description, avoid repeated introductions. */
+.partner-head{margin:24px 0 22px}.partner-head .section-title{margin:9px 0 10px}.partner-head .section-lead{max-width:680px}
+/* Brand yellow is the actual WOOWU identity yellow. */
+.faq-brand-highlight{color:var(--yellow)!important;text-shadow:0 1px 0 rgba(31,32,34,.12);position:relative}
+/* Footer as one continuous brand surface: clear contact lead-in, grouped navigation, integrated locations. */
+.site-footer.footer-rebuilt{padding:0 0 24px;background:radial-gradient(ellipse at 85% 0%,rgba(250,238,0,.08),transparent 34%),linear-gradient(145deg,#171a1e,#20252a 65%,#171a1e)}
+.site-footer.footer-rebuilt:before{right:-8%;top:-42%;width:48vw;height:48vw;border-color:rgba(250,238,0,.08);box-shadow:0 0 0 35px rgba(250,238,0,.015),0 0 0 75px rgba(250,238,0,.012)}
+.footer-service-cta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:44px 0 38px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer-service-cta h2{font-size:clamp(24px,3vw,38px);letter-spacing:-.045em;margin:10px 0 8px;color:#fff}.footer-service-cta h2 em{font-style:normal;color:var(--yellow)}
+.footer-service-cta p{font-size:12px;color:rgba(255,255,255,.56);margin:0}
+.footer-hotline{min-width:220px;padding:16px 20px;border:1px solid rgba(250,238,0,.26);border-radius:15px;background:linear-gradient(120deg,rgba(250,238,0,.09),rgba(255,255,255,.035));display:flex;flex-direction:column;gap:4px}
+.footer-hotline small{font-size:9px;color:rgba(255,255,255,.52)}.footer-hotline b{font-size:22px;letter-spacing:.025em;color:#fff}.footer-hotline span{font-size:10px;color:var(--yellow)}
+.footer-main-rebuilt{grid-template-columns:1.15fr .7fr .95fr 1.55fr;gap:30px;padding:36px 0 30px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand p{max-width:270px;font-size:11px;line-height:2;color:rgba(255,255,255,.58);margin:18px 0 13px}.footer-website{font-size:10px;color:var(--yellow);letter-spacing:.04em}
+.footer-col h3{font-size:10px;letter-spacing:.13em;margin-bottom:14px}.footer-col a,.footer-col p{font-size:10px;line-height:1.85;color:rgba(255,255,255,.58);margin-bottom:8px}.footer-col a:hover{color:var(--yellow)}
+.footer-subheading{margin-top:22px!important;padding-top:15px;border-top:1px solid rgba(255,255,255,.1)}
+.footer-address-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.footer-address-heading span{font-size:7px;letter-spacing:.14em;color:rgba(255,255,255,.34)}
+.footer-address-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}.footer-address-grid p{display:flex;flex-direction:column;gap:3px;margin:0!important;padding:8px 9px;border-radius:9px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.055)}.footer-address-grid p b{font-size:9px;color:#fff}.footer-address-grid p span{font-size:8px;line-height:1.7;color:rgba(255,255,255,.5);overflow-wrap:anywhere}.footer-address-grid .footer-address-overseas{grid-column:1/-1}
+.footer-social-row{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0 15px;border-bottom:1px solid rgba(255,255,255,.08)}.footer-company-name{font-size:10px;letter-spacing:.05em;color:rgba(255,255,255,.55)}.footer-socials{display:flex;gap:8px;flex-wrap:wrap}.social-chip{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:99px;padding:7px 11px;color:rgba(255,255,255,.7);font-size:9px}.social-chip:hover{border-color:rgba(250,238,0,.45);color:var(--yellow)}
+.footer-bottom{padding-top:16px;color:rgba(255,255,255,.34);font-size:9px}.footer-bottom a{color:rgba(255,255,255,.52)}
+@media(max-width:1000px){.footer-main-rebuilt{grid-template-columns:1fr 1fr;gap:28px}.footer-address-col{grid-column:1/-1}}
+@media(max-width:600px){.footer-service-cta{align-items:flex-start;flex-direction:column;padding:35px 0 28px}.footer-hotline{width:100%}.footer-main-rebuilt{grid-template-columns:1fr 1fr;gap:24px 16px}.footer-brand,.footer-address-col{grid-column:1/-1}.footer-address-grid{grid-template-columns:1fr 1fr}.footer-social-row{align-items:flex-start;flex-direction:column}.footer-bottom{align-items:flex-start;flex-direction:column}}
+
+/* Match the final try-it tile to the other seven capability tiles; breathing halo is the only special cue. */
+.ai-try-card{position:relative;background:rgba(255,255,255,.06)!important;border-color:rgba(250,238,0,.34)!important;box-shadow:0 0 0 1px rgba(250,238,0,.08),0 10px 28px rgba(0,0,0,.12)!important;animation:tryTileBreath 3.2s ease-in-out infinite}
+.ai-try-card:before{content:"";position:absolute;inset:-2px;border:1px solid rgba(250,238,0,.42);border-radius:19px;pointer-events:none;animation:tryTileHalo 3.2s ease-in-out infinite}
+.ai-try-visual{background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))!important;min-height:150px;justify-content:center}
+.ai-try-card>div:last-child{background:transparent!important}
+.ai-try-card>div:last-child b{color:#fff!important}.ai-try-card>div:last-child span{color:rgba(255,255,255,.58)!important}
+@keyframes tryTileBreath{0%,100%{box-shadow:0 0 0 1px rgba(250,238,0,.07),0 10px 28px rgba(0,0,0,.12)}50%{box-shadow:0 0 0 2px rgba(250,238,0,.16),0 13px 34px rgba(250,238,0,.08)}}
+@keyframes tryTileHalo{0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.65;transform:scale(1.012)}}
+@media(prefers-reduced-motion:reduce){.ai-try-card,.ai-try-card:before{animation:none!important}}
+
+
+/* Final polish: visible WOOWU hub, legible product labels, unified footer and refined launch CTA. */
+.discover-link-scene{isolation:isolate;overflow:visible;padding:4px 0}
+.discover-source{width:62px;height:68px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:2px;padding-top:7px;border-radius:13px;z-index:3;background:linear-gradient(145deg,#fff,#f1f3f4);box-shadow:0 8px 20px rgba(31,32,34,.09)}
+.discover-source i{width:24px;height:29px;flex:0 0 29px}
+.discover-source small{position:static!important;display:block;font-size:8px!important;line-height:1.2;color:#59616a!important;font-weight:800;white-space:nowrap;letter-spacing:.02em}
+.discover-network-svg{z-index:4;overflow:visible}
+.discover-product-core{z-index:9!important;left:50%!important;top:53%!important;width:72px;height:72px;border-radius:21px;border:3px solid #fff;background:linear-gradient(145deg,#fff36a 0%,#faee00 58%,#dfd300 100%);box-shadow:0 0 0 8px rgba(250,238,0,.17),0 13px 30px rgba(31,32,34,.2),inset 0 2px 0 rgba(255,255,255,.75);display:flex!important;flex-direction:column;align-items:center;justify-content:center;animation:productFocus 3.6s ease-in-out infinite}
+.discover-product-core span{font-size:28px!important;font-weight:950;color:#202329!important;line-height:1}
+.discover-product-core small{font-size:7px!important;letter-spacing:.13em;color:rgba(31,32,34,.68)!important;font-weight:900;margin-top:4px}
+.discover-pull-ring{display:block!important;position:absolute;z-index:5;left:50%;top:53%;width:98px;height:98px;transform:translate(-50%,-50%);border:1px solid rgba(250,238,0,.42);border-radius:50%;animation:hubPulse 3.2s ease-out infinite;pointer-events:none}
+@keyframes hubPulse{0%{opacity:.7;scale:.72}80%,100%{opacity:0;scale:1.55}}
+.source-one{left:5%;top:9%}.source-two{left:27%;bottom:0}.source-three{right:5%;top:9%}.source-four{right:27%;bottom:0}.source-five{left:50%;top:-2%;transform:translateX(-50%)}.source-six{left:0;top:58%}.source-seven{right:0;top:58%}.source-eight{left:50%;bottom:-2%;transform:translateX(-50%)}
+/* Address labels now follow the same quiet typographic treatment as the other footer columns. */
+.footer-address-hover-grid{gap:8px!important}
+.footer-address-hover-grid p{min-height:0!important}
+.footer-address-hover-grid p b{font-size:10px!important}
+/* Smaller, more editorial launch panel with restrained ambient motion. */
+.client-launch{position:relative;isolation:isolate;overflow:hidden;padding:62px 22px 54px!important;background:linear-gradient(180deg,#f8faf8 0%,#fff 100%)!important;border-top:1px solid rgba(31,32,34,.045)!important}
+.client-launch:before{content:"";position:absolute;z-index:-1;width:min(760px,90vw);height:260px;left:50%;top:-150px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(250,238,0,.22),rgba(177,224,213,.12) 38%,transparent 72%);filter:blur(16px);animation:launchAmbient 9s ease-in-out infinite alternate}
+.client-launch:after{content:"";position:absolute;z-index:-1;inset:0;background-image:radial-gradient(rgba(31,32,34,.075) .7px,transparent .7px);background-size:19px 19px;mask-image:linear-gradient(180deg,rgba(0,0,0,.22),transparent 78%);opacity:.22;pointer-events:none}
+@keyframes launchAmbient{from{opacity:.55;transform:translateX(-54%) scale(.94)}to{opacity:1;transform:translateX(-46%) scale(1.08)}}
+.client-launch-inner{position:relative;max-width:850px}
+.client-launch-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:6px 11px;border:1px solid rgba(31,32,34,.08);border-radius:99px;background:rgba(255,255,255,.68);color:#777e82;font-size:8px;letter-spacing:.2em}
+.client-launch h2{font-size:clamp(25px,3.2vw,34px)!important;letter-spacing:-.045em!important;margin:13px 0 7px!important;color:#202329}
+.client-launch p{font-size:12px!important;color:#737a7e!important;margin-bottom:23px!important}
+.client-launch-options{display:flex!important;justify-content:center;align-items:center;gap:11px!important;max-width:none!important}
+.client-launch-options>a{width:auto!important;min-height:0!important;min-width:150px;padding:11px 17px!important;border-radius:999px!important;font-size:11px!important;transition:transform .22s,background .22s,box-shadow .22s!important}
+.client-launch-options>a.client-download-btn{background:#202329!important;border:1px solid #202329!important;color:#fff!important;box-shadow:0 5px 13px rgba(31,32,34,.11)!important}
+.client-launch-options>a.client-download-btn:hover{transform:translateY(-2px)!important;background:#343940!important;box-shadow:0 9px 20px rgba(31,32,34,.15)!important}
+.client-launch-options>a.client-web-btn{min-width:110px!important;background:transparent!important;border:1px solid transparent!important;color:#343a40!important}
+.client-launch-options>a.client-web-btn:hover{transform:translateY(-2px)!important;background:rgba(255,255,255,.78)!important;border-color:rgba(31,32,34,.08)!important}
+.client-launch-options b{font-size:11px!important;font-weight:750!important;white-space:nowrap}
+.client-launch-foot{max-width:620px!important;gap:11px!important;margin-top:12px!important;color:#92999c!important;font-size:9px!important}
+@media(max-width:640px){.discover-link-scene{height:206px!important;max-width:100%}.discover-source{width:49px;height:59px;padding-top:5px}.discover-source i{scale:.82}.discover-source small{font-size:7px!important}.discover-product-core{width:60px;height:60px}.discover-product-core span{font-size:23px!important}.discover-product-core small{font-size:6px!important}.source-one{left:1%}.source-three{right:1%}.source-six{left:-2%}.source-seven{right:-2%}.client-launch{padding:48px 18px 42px!important}.client-launch-options{flex-wrap:wrap!important;gap:8px!important}.client-launch-options>a{min-width:138px!important;padding:10px 14px!important}.client-launch-options>a.client-web-btn{min-width:100px!important}.client-launch-foot{grid-template-columns:1fr!important;gap:4px!important}.footer-address-hover-grid p:after{position:fixed;left:16px!important;right:16px!important;bottom:80px;width:auto;max-width:none}}
+@media(prefers-reduced-motion:reduce){.discover-product-core,.discover-pull-ring,.client-launch:before{animation:none!important}}
 
 </style>
 <style id="woowu-natural-marquee-refine">
@@ -1223,7 +1475,7 @@ body.fx-pointer{cursor:auto!important}
 .footer-rebuilt{padding:0 0 25px;background:linear-gradient(115deg,#121416,#202327 58%,#151719)}.footer-service-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:65px 0 43px;border-bottom:1px solid rgba(255,255,255,.13)}.footer-service-cta .eyebrow{color:rgba(255,255,255,.5)}.footer-service-cta h2{font-size:clamp(31px,4.5vw,52px);line-height:1.1;letter-spacing:-.06em;color:#fff;margin:14px 0 11px}.footer-service-cta h2 em{font-style:normal;color:var(--yellow)}.footer-service-cta p{font-size:12px;color:rgba(255,255,255,.53);margin:0}.footer-hotline{min-width:245px;padding:20px 23px;border-radius:15px;background:var(--yellow);color:#1f2022;box-shadow:0 15px 36px rgba(250,238,0,.15)}.footer-hotline small{display:block;font-size:9px;font-weight:900;letter-spacing:.1em;opacity:.62}.footer-hotline b{display:block;font-size:27px;letter-spacing:-.05em;margin:4px 0 5px}.footer-hotline span{font-size:9px;font-weight:900}
 .footer-main-rebuilt{grid-template-columns:1.2fr .7fr 1.45fr 1.4fr;gap:28px;padding:42px 0 35px}.footer-main-rebuilt .footer-brand img{width:142px}.footer-brand .footer-website{display:inline-block;margin-top:14px;color:var(--yellow);font-size:10px;font-weight:850}.footer-address-col p{font-size:10px;line-height:1.8;margin:0 0 11px;color:rgba(255,255,255,.48)}.footer-address-col p b{display:inline-block;color:rgba(255,255,255,.8);margin-right:6px;font-size:10px}.footer-social-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}.footer-company-name{font-size:11px;font-weight:850;color:rgba(255,255,255,.76)}.footer-socials{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.social-chip{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid rgba(255,255,255,.16);border-radius:99px;background:rgba(255,255,255,.055);color:rgba(255,255,255,.72);font-size:9px;font-weight:800;transition:background .25s,border .25s,color .25s,transform .25s}.social-chip:hover,.social-chip:focus-visible{background:rgba(250,238,0,.12);border-color:rgba(250,238,0,.55);color:#fff;transform:translateY(-2px)}.social-chip>b{font-size:11px;color:var(--yellow)}.social-symbol{display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--yellow);color:#1f2022;font-weight:950;font-size:10px}.wechat-social-wrap{position:relative}.wechat-chip{cursor:pointer;font-family:inherit}.wechat-qr-popover{position:absolute;z-index:50;right:0;bottom:calc(100% + 12px);width:190px;padding:12px;border:1px solid rgba(255,255,255,.16);border-radius:13px;background:#fff;box-shadow:0 18px 45px #0004;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s;text-align:center}.wechat-social-wrap:hover .wechat-qr-popover,.wechat-social-wrap:focus-within .wechat-qr-popover,.wechat-social-wrap.open .wechat-qr-popover{opacity:1;visibility:visible;transform:translateY(0)}.wechat-qr-popover img{width:150px;height:150px;object-fit:contain;margin:0 auto 7px}.wechat-qr-popover small{font-size:9px;color:#707982}.wechat-qr-placeholder{display:none;min-height:130px;place-items:center;background:#f2f4f6;border-radius:8px;color:#7b8590;font-size:10px;line-height:1.8}.wechat-qr-placeholder b{color:#252a30}.footer-bottom{padding-top:20px}
 @media(max-width:1050px){.footer-main-rebuilt{grid-template-columns:1.2fr .8fr 1fr;}.footer-address-col:last-child{grid-column:2/-1}.about-layout{grid-template-columns:170px 1fr;gap:22px}.about-history-track{grid-template-columns:repeat(3,1fr);row-gap:20px}}
-@media(max-width:800px){.service-scope-grid{grid-template-columns:1fr 1fr}.ai-capability-grid{grid-template-columns:repeat(2,1fr)}.mall-capability-grid{grid-template-columns:1fr}.mall-co-create{grid-template-columns:1fr;gap:8px}.about-layout{grid-template-columns:1fr;gap:17px}.about-rail{position:relative;top:auto;display:grid;grid-template-columns:1fr;gap:8px;padding:12px}.about-rail-title{padding-bottom:8px}.about-rail-track{left:14px;top:43px;bottom:42px}.about-rail-links{grid-template-columns:repeat(3,1fr);gap:4px;padding:5px 0 0 9px}.about-rail-links a{justify-content:center;gap:6px;font-size:9px;padding:5px 2px}.about-rail-links a b{width:20px;height:20px}.about-rail-caption{display:none}.about-platform-grid{grid-template-columns:1fr}.founder-card{max-width:350px}.mbc-node{padding:16px 13px}.mbc-node p{font-size:9px}.growth-stages{grid-template-columns:repeat(2,1fr);row-gap:18px}.growth-stages:before{display:none}.about-history-track{grid-template-columns:repeat(3,1fr)}.download-app-inner{grid-template-columns:1fr;gap:20px}.download-visual{height:300px}.footer-service-cta{align-items:flex-start;flex-direction:column}.footer-hotline{width:100%}.footer-main-rebuilt{grid-template-columns:1fr 1fr}.footer-address-col:last-child{grid-column:auto}.footer-social-row{align-items:flex-start;flex-direction:column}}
+@media(max-width:800px){.service-scope-grid{grid-template-columns:1fr 1fr}.ai-capability-grid{grid-template-columns:repeat(2,1fr)}.mall-capability-grid{grid-template-columns:1fr}.mall-co-create{grid-template-columns:1fr;gap:8px}.about-layout{grid-template-columns:1fr;gap:17px}.about-rail{position:relative;top:auto;display:grid;grid-template-columns:1fr;gap:8px;padding:12px}.about-rail-title{padding-bottom:8px}.about-rail-track{left:14px;top:43px;bottom:42px}.about-rail-links{grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;padding:5px 0 0 9px}.about-rail-links a{justify-content:center;gap:6px;font-size:9px;padding:5px 2px}.about-rail-links a b{width:20px;height:20px}.about-rail-caption{display:none}.about-platform-grid{grid-template-columns:1fr}.founder-card{max-width:350px}.mbc-node{padding:16px 13px}.mbc-node p{font-size:9px}.growth-stages{grid-template-columns:repeat(2,1fr);row-gap:18px}.growth-stages:before{display:none}.about-history-track{grid-template-columns:repeat(3,1fr)}.download-app-inner{grid-template-columns:1fr;gap:20px}.download-visual{height:300px}.footer-service-cta{align-items:flex-start;flex-direction:column}.footer-hotline{width:100%}.footer-main-rebuilt{grid-template-columns:1fr 1fr}.footer-address-col:last-child{grid-column:auto}.footer-social-row{align-items:flex-start;flex-direction:column}}
 @media(max-width:520px){.service-scope-grid{grid-template-columns:1fr}.service-scope-card{min-height:165px}.service-delivery-note{justify-content:flex-start;gap:8px;font-size:9px}.ai-capability-head{align-items:flex-start;flex-direction:column;margin-top:38px}.ai-capability-grid{gap:8px}.ai-capability-card{min-height:190px;padding:10px}.ai-mini-art{height:70px}.ai-capability-meta h4{font-size:12px}.ai-capability-meta p{font-size:9px}.mall-co-create{padding:16px}.about-panel{padding:20px 16px;border-radius:18px}.about-panel-top{font-size:8px}.about-panel-top i{font-size:9px}.about-foundation-line{gap:6px;padding:12px 9px;font-size:8px}.about-foundation-line i{width:10px}.mbc-diagram{grid-template-columns:1fr;gap:9px}.mbc-connectors{display:none}.mbc-node{min-height:0;padding:15px}.mbc-node>small{margin-top:10px}.mbc-node p{min-height:0}.mbc-node.mbc-b{transform:none}.mbc-node.mbc-b:hover{transform:translateY(-5px)}.mbc-flow{font-size:8px;gap:5px}.mbc-value-row{grid-template-columns:1fr}.growth-stages{grid-template-columns:1fr 1fr}.growth-stages article{padding-right:7px}.about-history-track{grid-template-columns:repeat(2,1fr)}.partner-marquee-single .partner-cell{height:83px;flex-basis:130px;padding:12px}.partner-marquee-single .partner-cell img{max-height:44px}.partner-simple-note{font-size:9px}.download-copy h2{font-size:38px}.download-visual{height:260px}.download-device{transform:scale(.88) rotateY(-12deg) rotateX(5deg)}.download-orbit{width:250px;height:250px}.orbit-two{width:300px;height:180px}.download-float{font-size:8px;padding:7px 9px}.footer-main-rebuilt{grid-template-columns:1fr;gap:25px}.footer-address-col:last-child{grid-column:auto}.footer-hotline b{font-size:24px}.footer-socials{gap:7px}.social-chip{font-size:8px;padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.partner-marquee-single .partner-track,.download-orbit,.download-float,.mini-scene span{animation:none!important}.about-rail-links a,.about-rail-track span,.ai-capability-card,.service-scope-card{transition:none!important}}
 
@@ -1455,6 +1707,265 @@ a,button,[role="button"]{cursor:pointer}
 @media(max-width:900px){.about-platform-grid-clean{grid-template-columns:1fr}.about-platform-pillars{grid-template-columns:repeat(3,minmax(0,1fr))}.ai-capability-grid-eight{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.about-platform-pillars{grid-template-columns:1fr}.founder-inline-clean{grid-template-columns:72px 1fr;padding:14px;gap:12px}.founder-inline-clean>img{width:72px;height:72px}.ai-capability-grid-eight{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ai-capability-grid-eight .ai-image-card>img,.ai-feature-art,.ai-try-visual{height:130px}.ai-feature-art{padding:12px;gap:7px}.ai-feature-art b{font-size:21px!important}.ai-feature-art i{font-size:9px}.ai-try-visual{padding:12px;gap:8px}.ai-try-visual b{font-size:16px}.ai-capability-grid-eight .ai-image-card>div:not(.ai-feature-art):not(.ai-try-visual){padding:10px}.ai-capability-grid-eight .ai-image-card b{font-size:13px}.ai-capability-grid-eight .ai-image-card span{font-size:10px}}
 </style>
+
+<style id="woowu-refinement-round-two">
+/* Consistent optical centering for circular arrows, plus signs and compact icon controls. */
+.btn .arrow,.faq-question .plus,.context-close .arrow,.social-chip .social-symbol{
+ box-sizing:border-box;display:inline-grid;place-items:center;line-height:1;vertical-align:middle;padding:0;text-align:center;
+}
+.btn .arrow{font-family:Arial,sans-serif;font-size:16px;transform:none;flex:0 0 25px}
+.btn:hover .arrow{transform:translate(2px,-1px)}
+.faq-question .plus{font-family:Arial,sans-serif;font-size:19px;line-height:1;transform-origin:center; padding:0!important}
+.faq-item.open .faq-question .plus{transform:rotate(45deg)}
+/* Keep flex/grid children shrinkable so cards and controls never collide at intermediate widths. */
+.container,.about-story,.about-panel,.detail-copy,.detail-visual,.ai-image-card,.platform-timeline-wrap,.platform-timeline-card,.footer-col{min-width:0}
+img,svg,video{max-width:100%}
+.btn,.nav-cta,.faq-question,.social-chip{max-width:100%}
+.btn{white-space:normal}
+.faq-question{gap:14px}
+.faq-question>span:last-child{flex:0 0 30px}
+/* Replace flat dark-on-light strips with restrained editorial treatment. */
+.mall-co-create-compact{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(210px,.72fr) minmax(0,1.6fr);align-items:center;gap:24px;padding:22px 26px!important;border:1px solid rgba(31,32,34,.1);border-radius:18px;background:linear-gradient(112deg,#24272b 0%,#30343a 62%,#3a3d40 100%);box-shadow:0 16px 34px rgba(31,32,34,.09)}
+.mall-co-create-compact:before{content:"";position:absolute;z-index:-1;right:-40px;top:-95px;width:260px;height:260px;border:1px solid rgba(250,238,0,.2);border-radius:50%;box-shadow:0 0 0 24px rgba(250,238,0,.035),0 0 0 52px rgba(255,255,255,.025)}
+.mall-co-create-compact:after{content:"";position:absolute;z-index:-1;left:0;top:18px;bottom:18px;width:3px;border-radius:0 4px 4px 0;background:var(--yellow)}
+.mall-co-create-compact>div{display:flex;flex-direction:column;gap:7px}
+.mall-co-create-compact>div small{color:var(--yellow)!important;font-size:9px;letter-spacing:.18em;font-weight:850}
+.mall-co-create-compact>div b{color:#fff!important;font-size:18px;letter-spacing:-.025em}
+.mall-co-create-compact p{position:relative;margin:0!important;padding-left:20px;border-left:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.78)!important;font-size:12px;line-height:1.9!important}
+.about-foundation-line{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;padding:17px 20px;border:1px solid rgba(31,32,34,.08);border-radius:16px;background:linear-gradient(105deg,#f3f3ef 0%,#fff 48%,#f5f4eb 100%);box-shadow:inset 0 1px #fff,0 10px 25px rgba(31,32,34,.035);overflow:hidden}
+.about-foundation-line:before{content:"WOOWU PHILOSOPHY";position:absolute;right:16px;top:8px;color:rgba(31,32,34,.07);font-size:8px;font-weight:950;letter-spacing:.16em}
+.about-foundation-line span{position:relative;z-index:1;color:#282b2e;font-size:12px;font-weight:850;letter-spacing:.02em}
+.about-foundation-line span:first-child,.about-foundation-line span:last-child{color:#292b2d}
+.about-foundation-line i{width:24px;height:1px;flex:0 0 24px;background:linear-gradient(90deg,rgba(31,32,34,.16),#b9aa00);position:relative}
+.about-foundation-line i:after{content:"";position:absolute;right:0;top:-2px;width:5px;height:5px;border-top:1px solid #9c9000;border-right:1px solid #9c9000;transform:rotate(45deg)}
+.ai-capability-signoff{display:flex;align-items:center;gap:16px;margin-top:16px;padding:14px 18px;border-radius:13px;background:linear-gradient(100deg,rgba(250,238,0,.17),rgba(250,238,0,.035) 48%,rgba(31,32,34,.025));border:1px solid rgba(190,178,0,.15)}
+.ai-capability-signoff span{font-size:8px;font-weight:950;letter-spacing:.16em;color:#817900;white-space:nowrap}
+.ai-capability-signoff b{font-size:12px;color:#383a3c;font-weight:800}
+.ai-capability-signoff i{margin-left:auto;font-style:normal;font-size:8px;letter-spacing:.12em;color:#92989d;white-space:nowrap}
+/* Timeline is a continuously advancing carousel, with no hover-to-start interaction. */
+.timeline-autoplay-meta{gap:14px;margin-top:8px;color:#7f878d}
+.timeline-autoplay-meta>span:first-child{font-weight:850;letter-spacing:.13em;color:#555d63}
+.timeline-autoplay-meta>span:last-child{font-weight:650;color:#8b9297}
+.platform-timeline-wrap{overflow:hidden}
+.platform-timeline-track{will-change:transform}
+.platform-timeline-card{min-width:0;overflow-wrap:anywhere}
+/* Full office directory: broad two-column layout on desktop, one column on narrow screens. */
+.footer-main-rebuilt{grid-template-columns:1.25fr .7fr .95fr!important}
+.footer-address-col{grid-column:1/-1!important;max-width:none!important;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
+.footer-address-heading{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.footer-address-heading h3{margin:0!important}
+.footer-address-heading>span{font-size:8px;font-weight:850;letter-spacing:.18em;color:rgba(250,238,0,.72)}
+.footer-address-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.footer-address-grid p{display:grid;grid-template-columns:116px minmax(0,1fr);gap:10px;align-items:start;max-width:none!important;margin:0!important;padding:11px 0;border-top:1px solid rgba(255,255,255,.075);color:rgba(255,255,255,.62);font-size:11px;line-height:1.75}
+.footer-address-grid p b{color:#fff;font-size:11px;font-weight:850}
+.footer-address-grid p span{min-width:0;overflow-wrap:anywhere}
+.footer-address-grid .footer-address-overseas{grid-column:1/-1}
+@media(max-width:800px){.mall-co-create-compact{grid-template-columns:1fr;gap:12px}.mall-co-create-compact p{padding:12px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.18)}.about-foundation-line{justify-content:flex-start;gap:10px 12px}.about-foundation-line i{width:13px;flex-basis:13px}.ai-capability-signoff{flex-wrap:wrap;gap:7px 12px}.ai-capability-signoff i{margin-left:0}.footer-main-rebuilt{grid-template-columns:1fr 1fr!important}.footer-address-col{grid-column:1/-1!important}.footer-address-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.about-foundation-line{padding:15px 13px;gap:9px}.about-foundation-line span{font-size:10px}.about-foundation-line i{width:8px;flex-basis:8px}.mall-co-create-compact{padding:18px 17px!important}.mall-co-create-compact>div b{font-size:16px}.ai-capability-signoff{align-items:flex-start;flex-direction:column}.footer-address-grid{grid-template-columns:1fr}.footer-address-grid .footer-address-overseas{grid-column:auto}.footer-address-grid p{grid-template-columns:106px minmax(0,1fr);gap:8px;font-size:10px}.footer-address-grid p b{font-size:10px}.timeline-autoplay-meta{gap:8px}.timeline-autoplay-meta>span{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.platform-timeline-track{transition:none!important}}
+</style>
+
+
+<style id="woowu-content-polish-round-three">
+/* Proof statement: keep the full sentence on one line on wide screens. */
+.proof-top{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);align-items:center;gap:34px}
+.proof-note{max-width:none;width:100%;white-space:nowrap;font-size:clamp(11px,.95vw,13px);letter-spacing:.005em}
+@media(max-width:1050px){.proof-top{grid-template-columns:1fr;gap:12px}.proof-note{white-space:normal;text-align:left}}
+/* Product discovery orbit: eight distinct supply categories, contained within the art frame. */
+.specimen-card{max-width:clamp(104px,13vw,138px);padding:6px 8px 6px 6px;gap:6px}
+.specimen-card small{font-size:7px;letter-spacing:0;white-space:nowrap}
+.specimen-shape{width:24px;height:24px;flex:0 0 24px}
+.specimen-d{left:4%;top:62%;animation:specimenDriftA 8s ease-in-out infinite reverse}
+.specimen-e{left:27%;top:5%;animation:specimenDriftB 8.8s ease-in-out infinite reverse}
+.specimen-f{right:25%;top:68%;animation:specimenDriftC 9s ease-in-out infinite}
+.specimen-g{right:2%;top:48%;animation:specimenDriftA 8.2s ease-in-out infinite}
+.specimen-h{left:37%;bottom:2%;animation:specimenDriftB 9.2s ease-in-out infinite}
+.shape-home:before{content:"";position:absolute;left:5px;top:7px;width:14px;height:13px;background:linear-gradient(145deg,#f5d9a7,#b98c5b);clip-path:polygon(50% 0,100% 42%,88% 42%,88% 100%,12% 100%,12% 42%,0 42%)}
+.shape-food:before{content:"";position:absolute;left:5px;top:5px;width:14px;height:15px;border-radius:4px 4px 7px 7px;background:linear-gradient(90deg,#d98a4c,#f4c77e,#b96b39)}
+.shape-sport:before{content:"";position:absolute;left:4px;top:4px;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff 0 20%,#d5e1ed 22% 55%,#7e94a9 58%)}
+.shape-baby:before{content:"";position:absolute;left:5px;top:5px;width:14px;height:14px;border-radius:5px 5px 8px 8px;background:linear-gradient(145deg,#f7c8d6,#b8cce9)}
+.shape-other:before{content:"";position:absolute;left:5px;top:5px;width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#d9dce1,#f5df69,#a9c9bf);transform:rotate(45deg)}
+@media(max-width:600px){.specimen-card{max-width:100px;padding:5px 6px;gap:4px}.specimen-card small{font-size:6px}.specimen-shape{width:19px;height:19px;flex-basis:19px}.specimen-d{left:0;top:63%}.specimen-e{left:28%;top:1%}.specimen-f{right:22%;top:74%}.specimen-g{right:0;top:45%}.specimen-h{left:40%;bottom:0}}
+/* The product creation artwork carries the tool names itself; no duplicate floating frame. */
+.ai-marketing-title{letter-spacing:.08em!important;word-spacing:.12em}
+.ai-visual .visual-label{display:none!important}
+.ai-feature-note{display:none!important}
+.create-tool-chip{max-width:124px;white-space:nowrap;padding:6px 8px;font-size:7px}
+.chip-left{left:0;bottom:18%}.chip-right{right:0;top:18%}
+.chip-bottom-left{left:12%;top:13%;animation-delay:1.9s}
+.chip-bottom-right{right:8%;bottom:12%;animation-delay:2.5s}
+@media(max-width:600px){.create-tool-chip{max-width:105px;font-size:6px;padding:5px 6px}.chip-bottom-left{left:0;top:8%}.chip-bottom-right{right:0;bottom:5%}}
+/* The eighth tile is a CTA: dark typography on a calm field, with a gentle breathing accent. */
+.ai-try-card{background:#fff;border-color:rgba(31,32,34,.09)}
+.ai-try-visual{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(135deg,#262a30,#171a1e 70%,#30343a);color:#fff}
+.ai-try-visual:after{content:"";position:absolute;z-index:-1;inset:13px;border:1px solid rgba(250,238,0,.42);border-radius:10px;box-shadow:0 0 0 1px rgba(250,238,0,.08);animation:tryBreath 3.2s ease-in-out infinite}
+.ai-try-visual span{color:rgba(255,255,255,.58)}
+.ai-try-visual b{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.ai-try-visual b em{color:var(--yellow);text-shadow:none}
+.ai-try-visual i{color:var(--yellow)}
+@keyframes tryBreath{0%,100%{opacity:.55;transform:scale(.985)}50%{opacity:1;transform:scale(1)}}
+.ai-capability-signoff{background:linear-gradient(105deg,#24282d,#30353b 62%,#202429)!important;border-color:rgba(250,238,0,.22)!important;box-shadow:inset 3px 0 0 var(--yellow),0 12px 28px rgba(31,32,34,.08)}
+.ai-capability-signoff span{color:var(--yellow)!important}
+.ai-capability-signoff b{color:#fff!important}
+.ai-capability-signoff i{color:rgba(255,255,255,.55)!important}
+/* FAQ title brand accent. */
+.faq-brand-highlight{color:#b8a900;position:relative;display:inline-block}
+.faq-brand-highlight:after{content:"";position:absolute;left:0;right:0;bottom:1px;height:7px;background:rgba(250,238,0,.45);z-index:-1;transform:skewX(-12deg)}
+/* Footer: one continuous editorial surface, with quieter internal dividers and shared spacing. */
+.footer-rebuilt{background:radial-gradient(ellipse at 12% 0%,rgba(250,238,0,.055),transparent 35%),linear-gradient(125deg,#15181b 0%,#202429 54%,#171a1e 100%);padding-bottom:22px}
+.footer-service-cta{border-bottom:1px solid rgba(255,255,255,.09);padding:54px 0 34px}
+.footer-hotline{box-shadow:none;border-radius:10px;background:linear-gradient(115deg,#faee00,#e6dc00)}
+/* Hotline contrast fix: keep all text readable on the brand-yellow panel */
+.footer-hotline{color:#1f2022!important;background:linear-gradient(115deg,#faee00,#e6dc00)}
+.footer-hotline small,.footer-hotline b,.footer-hotline span{color:#1f2022!important;opacity:1;text-shadow:none}
+.footer-hotline b{font-weight:800;letter-spacing:.015em}
+.footer-hotline span{font-weight:700;opacity:.82}
+.footer-main-rebuilt{padding:34px 0 30px}
+.footer-address-col{border-top:1px solid rgba(255,255,255,.085)!important;padding-top:19px!important}
+.footer-social-row{border-top:1px solid rgba(255,255,255,.085);border-bottom:0;padding:17px 0 12px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.075);padding-top:14px}
+@media(max-width:800px){.proof-note{white-space:normal}.footer-service-cta{padding-top:38px}.footer-main-rebuilt{padding-top:27px}}
+@media(prefers-reduced-motion:reduce){.specimen-card,.ai-try-visual:after{animation:none!important}}
+
+/* QA refinements: prevent responsive clipping and keep popovers inside the viewport. */
+@media (min-width: 801px){
+  .nav-links>.nav-dropdown:last-child .nav-resource-menu{position:fixed;top:76px;right:24px;left:auto;transform:translateY(10px);max-width:calc(100vw - 48px)}
+  .nav-links>.nav-dropdown:last-child:hover .nav-resource-menu,
+  .nav-links>.nav-dropdown:last-child:focus-within .nav-resource-menu{transform:translateY(0)}
+}
+@media (max-width:800px){
+  #about>.container>.about-heading .section-title{font-size:clamp(27px,7vw,34px);line-height:1.25;letter-spacing:-.045em;overflow-wrap:anywhere}
+  .wechat-qr-popover{position:fixed;left:auto;right:12px;top:auto;bottom:88px;transform:translateY(8px);max-width:calc(100vw - 24px)}
+  .wechat-social-wrap:hover .wechat-qr-popover,.wechat-social-wrap:focus-within .wechat-qr-popover,.wechat-social-wrap.open .wechat-qr-popover{transform:translateY(0)}
+}
+.founder-inline-clean.photo-fallback:before{content:'孙丽';width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fffbd0,#f1e900 75%);color:#252a30;font-size:22px;font-weight:900;letter-spacing:.08em;border:4px solid #f1f2f3;box-shadow:0 6px 18px rgba(31,32,34,.1)}
+@media(max-width:760px){.founder-inline-clean.photo-fallback:before{width:64px;height:64px;font-size:18px}}
+
+/* Refined product-link illustration: eight categories connected by luminous signal paths. */
+.discover-link-scene{height:210px;max-width:520px}
+.discover-network-svg{position:absolute;inset:0;width:100%;height:100%;z-index:4;overflow:visible;pointer-events:none}
+.network-lines path{fill:none;stroke:rgba(190,177,0,.28);stroke-width:1.5;stroke-dasharray:3 5}
+.network-pulses circle{fill:#faee00;filter:url(#networkGlow);stroke:#fff;stroke-width:.7}
+.discover-source{width:48px;height:48px;animation:sourceVibrate 3.8s ease-in-out infinite}
+.source-one{left:7%;top:16%}.source-two{left:27%;bottom:5%}.source-three{right:7%;top:16%}.source-four{right:27%;bottom:5%}.source-five{left:50%;top:0;transform:translateX(-50%)}
+.source-six{left:2%;top:62%;animation-delay:-.7s}.source-seven{right:2%;top:62%;animation-delay:-1.5s}.source-eight{left:50%;bottom:0;transform:translateX(-50%);animation-delay:-2.2s}
+@keyframes sourceVibrate{0%,88%,100%{translate:0 0;rotate:0deg}91%{translate:1px -1px;rotate:-1deg}94%{translate:-1px 1px;rotate:1deg}97%{translate:1px 0;rotate:0deg}}
+.discover-product-core{z-index:8;left:50%;top:53%}
+.discover-claw-svg,.claw-arm,.claw-link,.claw-tip,.discover-pull-ring{display:none!important}
+.ai-capability-grid-eight .operation-art{height:190px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:radial-gradient(circle at 75% 20%,rgba(250,238,0,.24),transparent 34%),linear-gradient(145deg,#252a30,#111519);color:#f7f7f2;overflow:hidden}
+.operation-art:before,.operation-art:after{content:"";position:absolute;border:1px solid rgba(250,238,0,.24);border-radius:50%;width:150px;height:150px;right:-38px;bottom:-82px}
+.operation-art:after{width:95px;height:95px;right:-10px;bottom:-55px;border-color:rgba(255,255,255,.14)}
+.operation-art span{font-size:9px;letter-spacing:.16em;color:#faee00;font-weight:800;position:relative;z-index:1}
+.operation-art b{font-size:clamp(18px,2vw,25px);line-height:1.25;letter-spacing:-.04em;position:relative;z-index:1;max-width:90%}
+.operation-art i{font-style:normal;font-size:11px;color:rgba(255,255,255,.5);position:relative;z-index:1}
+.operation-detail{background:linear-gradient(140deg,#30343b,#171b20)}.operation-scene{background:linear-gradient(140deg,#34434a,#182126)}.operation-poster{background:linear-gradient(140deg,#4a4030,#1b1b1b)}.operation-video{background:linear-gradient(140deg,#263d43,#151b20)}.operation-model{background:linear-gradient(140deg,#493c43,#1c1b20)}.operation-edit{background:linear-gradient(140deg,#343b4b,#171b22)}
+.operation-try{background:radial-gradient(circle at 80% 20%,rgba(250,238,0,.3),transparent 34%),linear-gradient(145deg,#20252a,#101316);border:1px solid rgba(250,238,0,.4);animation:tryBreath 3.2s ease-in-out infinite}
+.operation-try b em{font-style:normal;color:#faee00}.operation-try i{font-size:24px;color:#faee00}
+@keyframes tryBreath{0%,100%{box-shadow:inset 0 0 0 1px rgba(250,238,0,.12)}50%{box-shadow:inset 0 0 0 2px rgba(250,238,0,.5),0 0 22px rgba(250,238,0,.12)}}
+.ai-capability-grid-eight .ai-try-card{text-decoration:none}
+.about-platform-bottom>p{color:#fff!important;line-height:1.85;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.about-platform-bottom{background:linear-gradient(120deg,#20252a,#30363c)!important;border:1px solid rgba(250,238,0,.24);border-radius:18px;padding:clamp(18px,2.4vw,30px)!important}
+.about-platform-bottom .about-keywords span{border-color:rgba(250,238,0,.28)!important;color:#f7f7f2!important;background:rgba(255,255,255,.07)!important}
+.site-footer.footer-rebuilt{padding-bottom:0}
+.footer-main-rebuilt{grid-template-columns:1.15fr .72fr .95fr 1.5fr;gap:clamp(22px,3vw,42px);align-items:start}
+.footer-address-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}
+.footer-address-grid p{min-width:0;line-height:1.65}.footer-address-grid p span{overflow-wrap:anywhere}
+.footer-social-row,.footer-bottom{border-color:rgba(255,255,255,.1)}
+.client-launch{background:radial-gradient(ellipse at 50% 0%,rgba(250,238,0,.12),transparent 48%),linear-gradient(180deg,#f7f8f6,#fff);padding:58px 22px 48px;color:#202329;text-align:center;border-top:1px solid rgba(31,32,34,.06)}
+.client-launch-inner{max-width:1060px;margin:0 auto}.client-launch-eyebrow{font-size:9px;letter-spacing:.2em;color:#8b8e91;font-weight:900}.client-launch h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.05em;margin:10px 0 8px}.client-launch p{color:#72777d;font-size:13px;margin:0 0 27px}
+.client-launch-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;text-align:left}
+.client-launch-options>a{min-height:82px;display:flex;align-items:center;gap:13px;padding:16px 17px;background:#fff;border:1px solid #e8eaeb;border-radius:13px;color:#202329;text-decoration:none;box-shadow:0 8px 24px rgba(31,32,34,.045);transition:transform .25s,border-color .25s,box-shadow .25s}
+.client-launch-options>a:hover{transform:translateY(-3px);border-color:#d5cb00;box-shadow:0 13px 28px rgba(31,32,34,.08)}
+.client-icon{width:35px;height:35px;flex:0 0 35px;border-radius:10px;background:#202329;color:#faee00;display:grid;place-items:center;font-weight:900;font-size:15px}
+.client-launch-options>a>span:nth-child(2){display:flex;flex-direction:column;gap:5px;min-width:0;flex:1}.client-launch-options b{font-size:13px}.client-launch-options small{font-size:10px;color:#858b90;line-height:1.5}.client-launch-options i{font-style:normal;color:#9a9fa3;font-size:13px}.client-launch-options .client-web{border-color:rgba(210,198,0,.55);background:linear-gradient(135deg,#fff,#fffef0)}.client-launch-foot{margin-top:17px;font-size:10px;color:#a0a4a7}
+@media(max-width:900px){.footer-main-rebuilt{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-address-col{grid-column:1/-1}}
+@media(max-width:600px){.discover-link-scene{height:190px}.discover-source{width:40px;height:40px}.discover-source small{font-size:6px}.discover-source i{scale:.8}.source-one{left:4%}.source-three{right:4%}.source-six{left:0}.source-seven{right:0}.ai-capability-grid-eight .operation-art{height:132px;padding:12px}.operation-art b{font-size:16px}.operation-art span{font-size:7px}.footer-main-rebuilt{grid-template-columns:1fr 1fr;gap:22px}.footer-brand,.footer-address-col{grid-column:1/-1}.footer-address-grid{grid-template-columns:1fr}.client-launch{padding:42px 17px 36px}.client-launch-options{grid-template-columns:1fr}.client-launch-options>a{min-height:72px}}
+@media(prefers-reduced-motion:reduce){.discover-source,.operation-try,.client-launch-options>a{animation:none!important;transition:none!important}}
+
+/* Footer and client-entry refinement */
+.footer-main-unified{grid-template-columns:1.18fr .78fr .92fr .92fr 1.32fr!important;gap:clamp(18px,2.4vw,34px)!important;align-items:start;padding:38px 0 32px!important}
+.footer-main-unified>.footer-col{min-width:0}
+.footer-main-unified>.footer-col h3{margin:0 0 16px;font-size:11px;letter-spacing:.12em;color:var(--yellow)}
+.footer-main-unified>.footer-col a{display:block;width:max-content;max-width:100%;margin:0 0 10px;font-size:10px;line-height:1.65;color:rgba(255,255,255,.64)}
+.footer-main-unified>.footer-col a:hover{color:var(--yellow)}
+.footer-main-unified .footer-address-col{grid-column:auto!important;border:0!important;padding:0!important;max-width:none!important}
+.footer-address-heading{margin:0 0 16px!important;justify-content:flex-start!important;gap:10px!important}
+.footer-address-grid.footer-address-hover-grid{display:flex;flex-direction:column;align-items:flex-start;gap:9px;margin:0}
+.footer-address-hover-grid p{position:relative;display:block!important;width:max-content;max-width:100%;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;cursor:help}
+.footer-address-hover-grid p b{font-size:10px!important;font-weight:600!important;color:rgba(255,255,255,.66)!important;margin:0!important;white-space:normal;line-height:1.6;transition:color .2s}
+.footer-address-hover-grid p:hover b,.footer-address-hover-grid p:focus-visible b{color:var(--yellow)!important}
+.footer-address-hover-grid p:focus-visible{outline:1px solid rgba(250,238,0,.5);outline-offset:4px}
+.footer-address-hover-grid p:after{content:attr(data-address);position:absolute;z-index:50;left:0;bottom:calc(100% + 9px);width:min(280px,75vw);padding:11px 13px;border:1px solid rgba(250,238,0,.28);border-radius:9px;background:#25282b;color:#f4f4f0;font-size:10px;font-weight:400;line-height:1.65;white-space:normal;overflow-wrap:anywhere;box-shadow:0 12px 30px #0005;opacity:0;visibility:hidden;transform:translateY(5px);transition:opacity .18s,transform .18s,visibility .18s;pointer-events:none}
+.footer-address-hover-grid p:hover:after,.footer-address-hover-grid p:focus-visible:after{opacity:1;visibility:visible;transform:translateY(0)}
+.footer-address-hover-grid p:nth-last-child(-n+2):after{left:auto;right:0}
+.client-launch{padding:54px 22px 43px;background:linear-gradient(180deg,#f6f7f5,#fff);border:0}
+.client-launch-options{max-width:900px;margin:0 auto;gap:14px}
+.client-launch-options>a{min-height:62px;justify-content:center;text-align:center;padding:15px 18px;border-radius:9px;box-shadow:none}
+.client-launch-options>a.client-download-btn{background:#1f2022;border:1px solid #1f2022;color:#fff}
+.client-launch-options>a.client-download-btn:hover{background:#303337;border-color:#303337;box-shadow:0 10px 22px rgba(31,32,34,.15)}
+.client-launch-options>a.client-download-btn .client-icon{display:none}
+.client-launch-options>a.client-download-btn b{font-size:13px;color:#fff}
+.client-launch-options>a.client-download-btn b i,.client-launch-options>a.client-web-btn b i{font-style:normal;margin-left:7px;opacity:.65}
+.client-launch-options>a.client-web-btn{background:transparent;border:1px solid transparent;box-shadow:none;color:#202329}
+.client-launch-options>a.client-web-btn:hover{background:#f0f1ed;border-color:#e3e5df;box-shadow:none}
+.client-launch-options>a.client-web-btn b{font-size:13px;color:#202329}
+.client-launch-foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:900px;margin:12px auto 0;color:#92979b;font-size:9px;line-height:1.5}
+.client-launch-foot span{text-align:center}
+@media(max-width:1000px){.footer-main-unified{grid-template-columns:repeat(3,minmax(0,1fr))!important}.footer-main-unified .footer-brand{grid-column:1/-1}.footer-main-unified .footer-address-col{grid-column:1/-1!important}}
+@media(max-width:600px){.footer-main-unified{grid-template-columns:1fr 1fr!important;gap:22px 16px!important}.footer-main-unified .footer-brand,.footer-main-unified .footer-address-col{grid-column:1/-1!important}.footer-address-hover-grid p:after{position:fixed;left:16px!important;right:16px!important;bottom:80px;width:auto;max-width:none}.client-launch-options{grid-template-columns:1fr;gap:9px}.client-launch-options>a{min-height:54px}.client-launch-foot{grid-template-columns:1fr;gap:5px}.client-launch-foot span{text-align:center}}
+</style>
+
+
+<style id="client-launch-alignment-fix">
+/* Align the three platform notes precisely beneath their corresponding actions. */
+.client-launch .client-launch-options{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+  width:min(100%,760px) !important;
+  max-width:760px !important;
+  margin:0 auto !important;
+}
+.client-launch .client-launch-options>a{
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-width:0 !important;
+  justify-self:stretch !important;
+}
+.client-launch .client-launch-foot{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:start !important;
+  justify-items:stretch !important;
+  gap:14px !important;
+  width:min(100%,760px) !important;
+  max-width:760px !important;
+  margin:12px auto 0 !important;
+  padding:0 !important;
+  font-size:10px !important;
+  line-height:1.55 !important;
+}
+.client-launch .client-launch-foot span{
+  display:block !important;
+  width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  text-align:center !important;
+  overflow-wrap:anywhere !important;
+}
+@media(max-width:600px){
+  .client-launch .client-launch-options,
+  .client-launch .client-launch-foot{
+    grid-template-columns:minmax(0,1fr) !important;
+    width:min(100%,360px) !important;
+    gap:8px !important;
+  }
+  .client-launch .client-launch-foot{margin-top:10px !important;gap:5px !important}
+  .client-launch .client-launch-foot span{text-align:center !important}
+}
+</style>
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -1502,11 +2013,11 @@ a,button,[role="button"]{cursor:pointer}
 <section aria-label="挖物品牌介绍" class="hero" id="home">
 <canvas aria-hidden="true" class="hero-particles" id="heroParticles"></canvas><div class="hero-grid"></div><div class="hero-orbit"></div><div aria-hidden="true" class="hero-lightbeam"></div>
 <div class="hero-copy">
-<div class="hero-kicker"><span>WOOWU AI</span><i></i><span>VERTICAL E-COMMERCE PLATFORM</span></div>
-<h1><span class="hero-title-line">挖物 AI，</span><span class="hero-title-line"><span class="highlight">更加垂直</span>服务电商行业。</span></h1>
-<p class="hero-desc">以电商服务为基础，以 AI 技术提升内容生产效率，连接源头商品、经营需求与市场推广。</p>
-<div class="hero-manifesto">专业服务  ×  AI 内容  ×  商品连接</div>
-<div class="hero-actions"><a class="btn btn-yellow" href="#about">认识挖物 <span class="arrow">↘</span></a><a class="btn btn-line" href="#proof">了解挖物 <span class="arrow">↓</span></a></div>
+<div class="hero-kicker"><span>挖物</span><i></i><span>一站式电商服务平台</span></div>
+<h1><span class="hero-title-line">挖物，</span><span class="hero-title-line"><span class="highlight">电商增长</span>引擎。</span></h1>
+<p class="hero-desc">以电商服务、AI 营销、选品商城三项能力，连接商品内容、智能创作与源头供给。</p>
+<div class="hero-manifesto">AI 驱动 × 数据赋能 × 全球链路</div>
+<div class="hero-actions"><a class="btn btn-yellow" href="#about">认识挖物 <span class="arrow">↘</span></a><a class="btn btn-line" href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank">免费开始创作 <span class="arrow">↗</span></a></div>
 </div>
 <div aria-label="挖物电商协作链路" class="hero-ecosystem"><div class="hero-ecosystem-intro"><small>WOOWU ECOSYSTEM</small><b>让商品，从供给走向市场</b></div>
 <div class="hero-ecosystem-track">
@@ -1517,14 +2028,25 @@ a,button,[role="button"]{cursor:pointer}
 </div></div>
 <div class="hero-scroll"><i></i>向下了解挖物</div>
 </section>
-<section aria-label="挖物专业积累" class="proof" id="proof">
-<div class="container">
-<div class="proof-top"><div><div class="proof-label">专业服务积累 · 服务能力沉淀</div><div class="proof-title">长期服务积累，形成专业底座。</div></div><div class="proof-note">从团队、影棚、技术到产业协作，持续沉淀面向电商行业的服务能力。</div></div>
-</div>
-<div class="proof-marquee"><div class="proof-track" id="proofTrack">
-<div class="proof-item"><strong>10,000+</strong><span>MCN机构和达人合作</span></div><div class="proof-item"><strong>1,000+㎡</strong><span>专业影棚</span></div><div class="proof-item"><strong>50+</strong><span>数字AI技术研发团队</span></div><div class="proof-item"><strong>300万+</strong><span>爆款商品视频年产量</span></div><div class="proof-item"><strong>78,293</strong><span>家电商客户沉淀</span></div><div class="proof-item"><strong>500+</strong><span>专业摄影团队</span></div><div class="proof-item"><strong>16年</strong><span>全国覆盖专业影视制作</span></div><div class="proof-item"><strong>30,000+</strong><span>年服务全品类厂商客户</span></div>
-<div aria-hidden="true" class="proof-item"><strong>10,000+</strong><span>MCN机构和达人合作</span></div><div aria-hidden="true" class="proof-item"><strong>1,000+㎡</strong><span>专业影棚</span></div><div aria-hidden="true" class="proof-item"><strong>50+</strong><span>数字AI技术研发团队</span></div><div aria-hidden="true" class="proof-item"><strong>300万+</strong><span>爆款商品视频年产量</span></div><div aria-hidden="true" class="proof-item"><strong>78,293</strong><span>家电商客户沉淀</span></div><div aria-hidden="true" class="proof-item"><strong>500+</strong><span>专业摄影团队</span></div><div aria-hidden="true" class="proof-item"><strong>16年</strong><span>全国覆盖专业影视制作</span></div><div aria-hidden="true" class="proof-item"><strong>30,000+</strong><span>年服务全品类厂商客户</span></div>
-</div></div>
+<section aria-label="围绕一件商品的完整电商链路" class="proof proof-journey" id="proof">
+ <div class="container">
+  <div class="proof-top">
+   <div>
+    <div class="proof-label">ONE PRODUCT · COMPLETE JOURNEY</div>
+    <div class="proof-title proof-title-nowrap">围绕一件商品，走完一段完整旅程。</div>
+   </div>
+   <div class="proof-note proof-note-nowrap">从源头供给、专业内容生产到智能创作与市场连接，让商品价值被更好地表达与触达。</div>
+  </div>
+  <div class="proof-journey-track">
+   <div class="proof-journey-step"><i>01</i><b>挖掘商品</b><span>源头供给 · 商品价值</span></div>
+   <em>→</em>
+   <div class="proof-journey-step"><i>02</i><b>专业服务</b><span>拍摄制作 · 视觉表达</span></div>
+   <em>→</em>
+   <div class="proof-journey-step"><i>03</i><b>AI 营销</b><span>智能创作 · 内容拓展</span></div>
+   <em>→</em>
+   <div class="proof-journey-step"><i>04</i><b>连接市场</b><span>选品合作 · 推广触达</span></div>
+  </div>
+ </div>
 </section>
 <div class="journey-scroll-zone" id="journeyScrollZone">
 <div aria-label="挖物商品旅程进度" class="journey-ticker" id="journeyTicker">
@@ -1553,14 +2075,22 @@ a,button,[role="button"]{cursor:pointer}
 <div class="journey-kicker"><b>01</b><span>挖物旅程 · 挖掘商品</span><i></i><small>挖掘 → 制作 → 连接</small></div>
 <h3>先挖掘商品价值，<em>再让它被看见</em></h3><p>从商品特点与经营场景出发，通过拍摄、设计和视频内容，把值得被看见的价值转化为专业表达。</p>
 </div>
-<div aria-hidden="true" class="journey-art art-discover" data-art-stage="discover">
-<div class="specimen-grid"></div><div class="discover-orbit orbit-a"></div><div class="discover-orbit orbit-b"></div><div class="discover-orbit orbit-c"></div>
-<div class="specimen-card specimen-a"><i class="specimen-shape shape-bottle"></i><small>美妆 · SKU 028</small></div>
-<div class="specimen-card specimen-b"><i class="specimen-shape shape-shoe"></i><small>鞋履 · SKU 106</small></div>
-<div class="specimen-card specimen-c"><i class="specimen-shape shape-device"></i><small>数码 · SKU 215</small></div>
-<div class="discover-core"><span>物</span></div><div class="discover-scan"></div><div class="discover-crosshair crosshair-one"></div><div class="discover-crosshair crosshair-two"></div>
-<i class="discover-spark spark-a"></i><i class="discover-spark spark-b"></i><i class="discover-spark spark-c"></i>
-<span class="art-coordinate coord-a">PRODUCT / VALUE SCAN</span><span class="art-coordinate coord-b">商品价值 · 正在识别</span>
+<div aria-hidden="true" class="journey-art art-discover discover-link-scene" data-art-stage="discover">
+<div class="discover-gridline"></div>
+<div class="discover-source source-one"><i class="shape-bottle"></i><small>美妆</small></div>
+<div class="discover-source source-two"><i class="shape-shoe"></i><small>鞋履</small></div>
+<div class="discover-source source-three"><i class="shape-device"></i><small>数码</small></div>
+<div class="discover-source source-four"><i class="shape-home"></i><small>家居</small></div>
+<div class="discover-source source-five"><i class="shape-food"></i><small>食品</small></div>
+<div class="discover-source source-six"><i class="shape-bag"></i><small>服饰</small></div>
+<div class="discover-source source-seven"><i class="shape-care"></i><small>个护</small></div>
+<div class="discover-source source-eight"><i class="shape-toy"></i><small>母婴</small></div>
+<svg class="discover-network-svg" viewBox="0 0 470 184" preserveAspectRatio="none" aria-hidden="true">
+<defs><filter id="networkGlow"><feGaussianBlur stdDeviation="2.8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g class="network-lines"><path d="M54 48 Q125 58 235 98"/><path d="M140 153 Q180 130 235 98"/><path d="M416 48 Q335 58 235 98"/><path d="M330 153 Q290 130 235 98"/><path d="M235 12 L235 98"/><path d="M52 115 Q130 112 235 98"/><path d="M418 115 Q340 112 235 98"/><path d="M235 172 L235 98"/></g>
+<g class="network-pulses"><circle r="3"><animateMotion dur="3.4s" repeatCount="indefinite" path="M54 48 Q125 58 235 98"/></circle><circle r="3"><animateMotion dur="3.8s" begin="-.8s" repeatCount="indefinite" path="M140 153 Q180 130 235 98"/></circle><circle r="3"><animateMotion dur="3.2s" begin="-1.4s" repeatCount="indefinite" path="M416 48 Q335 58 235 98"/></circle><circle r="3"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M330 153 Q290 130 235 98"/></circle><circle r="3"><animateMotion dur="3.5s" begin="-1s" repeatCount="indefinite" path="M235 12 L235 98"/></circle><circle r="3"><animateMotion dur="3.6s" begin="-2.2s" repeatCount="indefinite" path="M52 115 Q130 112 235 98"/></circle><circle r="3"><animateMotion dur="3.3s" begin="-.5s" repeatCount="indefinite" path="M418 115 Q340 112 235 98"/></circle><circle r="3"><animateMotion dur="3.9s" begin="-1.7s" repeatCount="indefinite" path="M235 172 L235 98"/></circle></g></svg>
+<div class="discover-product-core" aria-label="挖物连接中心"><span>挖</span><small>WOOWU</small></div>
+<div class="discover-pull-ring"></div><span class="art-coordinate coord-a">SOURCE → WOOWU</span><span class="art-coordinate coord-b">多品类供给 · 持续连接</span>
 </div>
 </div>
 <div class="journey-progress"><span style="--fill:33.333%"></span></div>
@@ -1572,7 +2102,7 @@ a,button,[role="button"]{cursor:pointer}
 <div class="detail-step"><b>01</b> 专业内容生产</div>
 <h2>电商服务</h2>
 <p class="detail-subtitle">专业内容生产，夯实商品表达。</p>
-<p class="detail-desc">面向源头工厂与品牌客户，围绕商品展示、品牌表达和经营需求，提供商品拍摄、短视频制作、电商视觉设计、企业宣传与探厂影像等服务，并可按项目需要延展至品牌策划、运营陪跑及相关经营配套。</p>
+<p class="detail-desc">面向源头工厂与品牌客户，围绕商品展示、品牌表达和经营需求，提供商品拍摄、产品棚拍、数字人7VR20、企业宣传与探厂影像等服务，并可按项目需要延展至品牌策划、运营陪跑及相关经营配套。</p>
 <div class="capabilities"><span>商品图拍摄</span><span>商品视频制作</span><span>主图 / 详情页设计</span><span>企业宣传片</span><span>探厂视频</span><span>信息流 / 口播视频</span><span>品牌策划</span><span>运营陪跑</span></div>
 <a class="btn btn-dark" href="https://serve.woowuclub.com/" rel="noopener" target="_blank">了解电商服务 <span class="arrow">↗</span></a>
 <div class="detail-foot">专业团队 · 影棚资源 · 标准化交付</div>
@@ -1602,7 +2132,7 @@ a,button,[role="button"]{cursor:pointer}
 <div aria-hidden="true" class="journey-art art-create" data-art-stage="create">
 <div class="create-grid"></div><div class="create-orbit"></div><div class="create-sheet sheet-back"><span>产品原始素材</span></div><div class="create-sheet sheet-mid"><span>场景与版式</span></div>
 <div class="create-sheet sheet-front"><span class="sheet-tag">WOOWU AI / CREATIVE</span><b>商品创意</b><i></i><small>IMAGE · VIDEO · CANVAS</small><em class="crop-handle handle-tl"></em><em class="crop-handle handle-tr"></em><em class="crop-handle handle-bl"></em><em class="crop-handle handle-br"></em></div>
-<div class="create-beam"></div><div class="create-tool-chip chip-left">主图生成 <b>✓</b></div><div class="create-tool-chip chip-right">短视频 <b>↗</b></div>
+<div class="create-beam"></div><div class="create-tool-chip chip-left">Agent 智能协作 <b>✓</b></div><div class="create-tool-chip chip-right">AI 生图 <b>↗</b></div><div class="create-tool-chip chip-bottom-left">AI 视频 <b>↗</b></div><div class="create-tool-chip chip-bottom-right">Canvas 画布 <b>＋</b></div>
 <span class="art-coordinate coord-a">PRODUCT → CONTENT</span><span class="art-coordinate coord-b">商品内容 · 正在成形</span>
 </div>
 </div>
@@ -1613,42 +2143,46 @@ a,button,[role="button"]{cursor:pointer}
 <div class="detail-layout reverse">
 <div class="detail-copy reveal">
 <div class="detail-step"><b>02</b> 电商智能创作</div>
-<h2>AI营销</h2>
-<p class="detail-subtitle">面向电商场景的 AI 内容创作工具。</p>
+<h2 class="ai-marketing-title">AI营销</h2>
+<p class="detail-subtitle">垂直电商场景的 AI 内容创作工具。</p>
 <p class="detail-desc">围绕商品主图、详情视觉与短视频创作，提供 Agent 智能协作、AI 生图、AI 视频与 Canvas 画布等工具能力；并面向电商常见制作需求，拓展商品场景生成、AI 模特、图像处理与营销文案等创作方式。</p>
 <div class="capabilities"><span>Agent 智能协作</span><span>AI 生图</span><span>AI 视频</span><span>Canvas 画布</span><span>智能抠图</span><span>AI 模特</span></div>
 <a class="btn btn-yellow" href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank">进入挖物 AI <span class="arrow">↗</span></a>
-<div class="ai-feature-note">挖物 AI 为在线自助创作工具；线下拍摄、设计等专业服务另行提供。具体模型、功能与服务规则以产品内实际展示为准。</div>
+
 </div>
 <div class="detail-visual ai-visual fx-tilt reveal reveal-delay-2">
 <div class="ai-ui"><div class="ai-ui-top"><span>挖物 AI · 创作工作区</span><span class="dots"><i></i><i></i><i></i></span></div><div class="ai-ui-title">让商品创意，<em>从灵感走向作品。</em></div><div class="ai-workspace"><div class="ai-preview"><img alt="商品视觉创意示例" loading="lazy" src="https://www.woowuclub.com/assets/e260b202607141452574679.png"/><div aria-hidden="true" class="ai-preview-fallback"><div class="ai-product-pack"></div><div class="ai-product-bottle"></div><span>商品创意预览</span></div></div><div class="ai-side"><div class="ai-tool"><small>01 / AGENT</small><b>智能协作</b></div><div class="ai-tool"><small>02 / IMAGE</small><b>AI 生图</b></div><div class="ai-tool"><small>03 / VIDEO</small><b>AI 视频</b></div><div class="ai-tool"><small>04 / CANVAS</small><b>创作画布</b></div></div></div><div class="ai-ui-bottom"><span>商品视觉 · 场景创意 · 内容制作</span><strong>创作更多可能 ↗</strong></div></div>
-<div class="visual-label"><small>挖物 AI</small><strong>让创作流程，更灵活。</strong></div>
 </div>
 </div>
-<div class="ai-capability-head reveal"><div><span class="ai-capability-kicker">E-COMMERCE CREATIVE TOOLKIT</span><h3>围绕一件商品，<em>拓展更多内容表达。</em></h3><p>从常见电商素材，到挖物 AI 创作能力，再到可以亲自上手的创作入口。</p></div></div>
+<div class="ai-capability-head reveal"><div><span class="ai-capability-kicker">E-COMMERCE CREATIVE TOOLKIT</span><h3>围绕一件商品，<em>拓展更多内容表达。</em></h3><p>从一张原图到可上架的图、视频和品牌资产，无需切换软件；主流模型阵列，面向全域电商创作场景。</p></div></div>
 <div class="ai-capability-grid ai-capability-grid-eight reveal">
-<article class="ai-image-card"><img alt="商品主图拍摄示例" loading="lazy" src="https://www.apohem.se/cdn-cgi/image/width%3D414%2Cformat%3Dauto/contentassets/6104e81c4bcc42128757c99ae5cb3c15/m-hero-1080x1080-beauty-weeks-v.14-15.jpg"/><div><small>01 / PRODUCT HERO</small><b>商品主图</b><span>突出产品主体与核心卖点，建立第一眼吸引力</span></div></article>
-<article class="ai-image-card"><img alt="电商详情页视觉示例" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/5f32fcb812cba9045f588c60/f1dd13fa-9547-4ef1-a5c3-7082d49fc8e2/%C2%A9Ani%2BHarutyunyan%2Bx%2BJoanna%2BVargas.jpg"/><div><small>02 / PRODUCT DETAIL</small><b>详情页设计</b><span>梳理产品信息、功能特点与购买理由</span></div></article>
-<article class="ai-image-card"><img alt="商品场景化展示示例" loading="lazy" src="https://images.squarespace-cdn.com/content/v1/645566d3d48aa2193914f2ff/0633c501-47f6-439e-adff-83666c52c450/DSC05285-Edit-Edit.jpg"/><div><small>03 / LIFESTYLE SCENE</small><b>场景氛围图</b><span>把商品放进生活场景，呈现使用方式与氛围</span></div></article>
-<article class="ai-image-card"><img alt="服饰商品模特展示示例" loading="lazy" src="https://cdn.prod.website-files.com/5e73b0054b9d003622f5c43e/6285fca9a513c113146750ea_Womenswear-ecommerce-photography-LRP-A-2.jpg"/><div><small>04 / SHORT VIDEO</small><b>短视频内容</b><span>用动态画面展示商品特点，适配内容传播场景</span></div></article>
-<article class="ai-image-card ai-feature-card"><div class="ai-feature-art ai-feature-agent"><span>WOOWU AI</span><b>Agent</b><i>需求理解 → 任务编排 → 内容输出</i></div><div><small>05 / AI AGENT</small><b>Agent 智能协作</b><span>理解创作需求，辅助组织提示词与创作流程</span></div></article>
-<article class="ai-image-card ai-feature-card"><div class="ai-feature-art ai-feature-image"><span>IMAGE STUDIO</span><b>AI 生图</b><i>商品视觉 · 创意场景 · 风格探索</i></div><div><small>06 / AI IMAGE</small><b>AI 图片创作</b><span>从商品素材出发，尝试更多视觉表达</span></div></article>
-<article class="ai-image-card ai-feature-card"><div class="ai-feature-art ai-feature-video"><span>VIDEO LAB</span><b>AI 视频</b><i>静态素材 → 动态表达</i></div><div><small>07 / AI VIDEO &amp; CANVAS</small><b>AI 视频与 Canvas</b><span>拓展视频生成与画布式创意编辑方式</span></div></article>
-<a class="ai-image-card ai-try-card" href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank"><div class="ai-try-visual"><span>YOUR PRODUCT · YOUR IDEAS</span><b>下一件商品，<em>试着这样创作。</em></b><i>进入挖物 AI ↗</i></div><div><small>08 / TRY IT NOW</small><b>现在就来试试</b><span>带上商品素材，开启你的下一次创作</span></div></a>
+<article class="ai-image-card"><div class="operation-art operation-main"><span>PRODUCT HERO</span><b>主图 · 卖点呈现</b><i>01</i></div><div><small>01 / PRODUCT HERO</small><b>商品主图</b><span>突出主体、核心卖点与产品质感</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-detail"><span>DETAIL STORY</span><b>详情 · 信息组织</b><i>02</i></div><div><small>02 / PRODUCT DETAIL</small><b>商品详情图</b><span>将功能特点、材质细节与使用价值清晰呈现</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-scene"><span>LIFESTYLE SCENE</span><b>场景 · 氛围表达</b><i>03</i></div><div><small>03 / LIFESTYLE</small><b>商品场景图</b><span>把商品融入真实生活与使用情境</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-poster"><span>CAMPAIGN VISUAL</span><b>海报 · 活动视觉</b><i>04</i></div><div><small>04 / CAMPAIGN</small><b>营销活动海报</b><span>围绕促销节点与传播主题组织画面</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-video"><span>PRODUCT MOTION</span><b>动态 · 短视频</b><i>05</i></div><div><small>05 / PRODUCT VIDEO</small><b>商品介绍视频</b><span>通过动态镜头呈现外观、特点与使用方式</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-model"><span>MODEL DISPLAY</span><b>模特 · 穿搭展示</b><i>06</i></div><div><small>06 / MODEL DISPLAY</small><b>模特展示图</b><span>呈现服饰、配饰等商品的上身效果</span></div></article>
+<article class="ai-image-card"><div class="operation-art operation-edit"><span>IMAGE REFINEMENT</span><b>优化 · 细节处理</b><i>07</i></div><div><small>07 / IMAGE EDITING</small><b>商品图像优化</b><span>进行背景调整、画面修饰与视觉完善</span></div></article>
+<a class="ai-image-card ai-try-card" href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank"><div class="operation-art operation-try"><span>YOUR PRODUCT · YOUR IDEAS</span><b>下一件商品，<em>试着这样创作。</em></b><i>↗</i></div><div><small>08 / TRY IT NOW</small><b>现在就来试试</b><span>带上商品素材，开启你的下一次创作</span></div></a>
 </div>
-<p class="ai-capability-footnote">前四项为常见电商内容需求，后续展示挖物 AI 当前提供的创作工具方向；实际可用功能、模型及操作流程以产品内当前版本为准。</p>
+<div class="ai-capability-signoff"><span>WOOWU AI CREATIVE</span><b>从商品素材出发，让每一次创作都有更多可能。</b><i>PRODUCT · IMAGE · VIDEO · BRAND</i></div>
 </div>
 </section>
 <div class="journey-bridge journey-connect reveal" data-journey="03">
 <div class="container journey-inner">
 <div class="journey-copy">
 <div class="journey-kicker"><b>03</b><span>挖物旅程 · 连接商品与市场</span><i></i><small>挖掘 → 制作 → 连接</small></div>
-<h3>让优质商品，<em>走向更多推广场景</em></h3><p>连接源头工厂、商家与内容创作者，围绕选品与分销合作，让优质商品找到更多推广入口。</p>
+<h3>让优质商品，<em>走向更多推广场景</em></h3><p>从源头供给出发，经过专业服务与 AI 内容创作，再连接商家、渠道与内容创作者，让优质商品走向更多推广场景。</p>
 </div>
 <div aria-hidden="true" class="journey-art art-connect" data-art-stage="connect">
-<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 420 180"><path class="connect-path path-one" d="M44 92 C112 10 150 18 210 92 S308 170 376 80"></path><path class="connect-path path-two" d="M44 92 C120 172 160 160 210 92 S310 14 376 80"></path><path class="connect-path path-three" d="M210 92 C190 20 116 20 90 45"></path><circle class="connect-node node-one" cx="44" cy="92" r="15"></circle><circle class="connect-node node-two" cx="210" cy="92" r="20"></circle><circle class="connect-node node-three" cx="376" cy="80" r="15"></circle><circle class="connect-pulse" cx="44" cy="92" id="connectPulse" r="5"></circle></svg>
-<div class="connect-hub"><b>物</b><small>商品</small></div><div class="connect-end end-supply"><i>厂</i><small>源头工厂</small></div><div class="connect-end end-creator"><i>创</i><small>推广创作者</small></div><div class="connect-end end-market"><i>商</i><small>经营场景</small></div>
-<span class="art-coordinate coord-a">SUPPLY ↔ DEMAND</span><span class="art-coordinate coord-b">商品关系 · 正在连接</span>
+<div class="market-scene-top"><span>WOOWU · COMMERCE NETWORK</span><span class="market-live"><i></i> LIVE CONNECTION</span></div>
+<div class="market-flow"></div>
+<div class="market-stage">
+<div class="market-product-card"><div class="market-product-visual"></div><div class="market-card-caption"><span>源头好物</span><b>SUPPLY</b></div></div>
+<div class="market-content-card"><div class="market-content-head"><span>WOOWU AI STUDIO</span><span>01 — 03</span></div><div class="market-content-preview"></div><div class="market-content-foot"><i></i><i></i><i></i></div></div>
+<div class="market-channel-stack"><div class="market-channel"><i>商</i><span>经营渠道</span></div><div class="market-channel"><i>播</i><span>内容推广</span></div><div class="market-channel"><i>达</i><span>创作者</span></div></div>
+</div>
+<div class="market-caption">FROM PRODUCT <b>→</b> CONTENT <b>→</b> MARKET</div>
 </div>
 </div>
 <div class="journey-progress"><span style="--fill:99.999%"></span></div>
@@ -1680,8 +2214,8 @@ a,button,[role="button"]{cursor:pointer}
 <div class="container">
 <div class="about-heading reveal">
 <div class="eyebrow">关于挖物 · WOOWU PLATFORM</div>
-<h2 class="section-title">从专业服务出发，<em>构建电商协作生态。</em></h2>
-<p class="section-lead about-lead-compact">从专业服务、AI 创作到商品连接，让电商经营中的不同角色找到协作入口。</p>
+<h2 class="section-title">挖物，<em>电商场景的“垂直枢纽”。</em></h2>
+<p class="section-lead about-lead-compact">从服务、工具到货源，一体化平台闭环供给。一站式接住电商全链路。</p>
 </div>
 <div class="about-layout">
 <aside aria-label="挖物介绍章节进度" class="about-rail">
@@ -1690,9 +2224,10 @@ a,button,[role="button"]{cursor:pointer}
 <nav class="about-rail-links">
 <a class="active" data-about-link="1" href="#about-platform"><b>01</b><span>平台定位</span></a>
 <a data-about-link="2" href="#about-mbc"><b>02</b><span>M / B / C 生态</span></a>
-<a data-about-link="3" href="#about-growth"><b>03</b><span>发展路径</span></a>
+<a data-about-link="3" href="#about-partners"><b>03</b><span>产业协作</span></a>
+<a data-about-link="4" href="#about-growth"><b>04</b><span>发展路径</span></a>
 </nav>
-<div class="about-rail-caption">平台 · 多端 · 发展</div>
+<div class="about-rail-caption">平台定位 · 生态协作 · 发展</div>
 </aside>
 <div class="about-story">
 <article class="about-panel about-platform-panel" data-about-panel="1" id="about-platform">
@@ -1701,7 +2236,7 @@ a,button,[role="button"]{cursor:pointer}
 <div class="about-platform-copy">
 <h3>挖物是什么？</h3>
 <p class="about-statement">挖物 WOOWU，是福建星美夸克数字科技有限公司旗下的 <em>AI 全域电商服务平台。</em></p>
-<p>挖物垂直服务电商行业，以 M2B2C 为业务协同模式，面向源头工厂、品牌方、生态服务商、中小商家、个人卖家与内容创作者，提供电商运营、数字内容制作、AI 营销工具、商品供给与推广协作等专业能力。平台从真实经营场景出发，将专业服务、智能创作和商品连接组织成相互衔接的业务体系。</p>
+<p>挖物垂直服务电商行业，以 M2B2C 为业务协同模式，面向源头工厂、品牌方、生态服务商、中小商家、个人卖家与内容创作者，提供电商服务、AI 营销工具、商品供给与推广协作等专业能力。从服务、工具到货源，逐步连接电商经营中的不同角色与环节。</p>
 </div>
 <div class="about-platform-pillars">
 <article><span>01 / E-COMMERCE SERVICE</span><b>电商专业服务</b><p>商品拍摄、短视频制作、视觉设计、企业宣传与探厂影像，并可按项目需要延展品牌策划、运营陪跑及经营配套。</p></article>
@@ -1711,7 +2246,7 @@ a,button,[role="button"]{cursor:pointer}
 <div class="about-platform-bottom"><p>以专业服务沉淀产业需求，以 AI 技术提升内容生产效率，以商品与数据连接多端资源。挖物坚持“内容为基础、运营强能力、技术创驱动、贸易造价值”的发展方向，持续探索 AI 驱动的全域电商协作生态。</p>
 <div class="about-keywords"><span>AI全域电商服务</span><span>M2B2C协作模式</span><span>源头工厂赋能</span><span>品牌共创</span><span>电商内容生产</span><span>AI营销工作流</span><span>达人选品分销</span><span>跨境电商服务</span><span>商品数据洞察</span></div></div>
 <div class="founder-inline founder-inline-clean">
-<img alt="挖物创始人孙丽" loading="lazy" src="img/founder-sunli.webp"/>
+<img alt="挖物创始人孙丽" loading="lazy" src="img/founder-sunli.webp" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"/>
 <div class="founder-inline-copy"><small>FOUNDER · CEO</small><b>孙丽 <span>创始人 · 实际控制人 · 挖物平台 CEO</span></b>
 <p>Lincoln University College 硕士研究生，传媒 / 科技领域持续创业者。拥有 10 年电视媒体节目主持人、制片人经历，以及 20 年影视传播与电商服务领域连续创业经历。</p>
 <p>长期关注电商产业服务、品牌内容表达与平台商业模式创新，在商业模式构建、营销战略、资源整合、项目操盘、团队管理及大客户开发方面具有持续实践经验；《无界新零售》Scopus Q3 论文撰稿者。</p></div>
@@ -1741,33 +2276,10 @@ a,button,[role="button"]{cursor:pointer}
 </div>
 <div class="mbc-value-footer"><b>让工厂的好商品，被看见；让专业服务有连接；让创作者有机会参与。</b><span>挖物 AI · 让多端深度参与电商增量价值的共享。</span></div>
 <p class="mbc-footnote">说明：当前以电商服务为主要业务基础；AI 营销仍在持续推广与验证，选品分销、品牌共创及多端数据协同按阶段推进。商业模式设计不代表所有环节已全面打通，具体以平台实际开放和项目约定为准。</p></article>
-<article class="about-panel about-growth-panel" data-about-panel="3" id="about-growth">
-<div class="about-panel-top"><span>03 / PLATFORM DEVELOPMENT</span><i>服务 · 技术 · 生态</i></div>
-<div class="about-panel-heading"><h3>从服务基建到生态商业变现，<em>持续推进平台模式闭环。</em></h3><p>从真实项目服务积累开始，逐步建设平台、沉淀商品与内容数据，再把 AI 创作能力和商品推广场景连接起来。每个阶段都对应具体能力建设，而不是脱离业务的技术概念。</p></div>
-<div class="timeline-visual-triptych">
-<article><img alt="专业电商服务拍摄" loading="lazy" src="https://images.microcms-assets.io/assets/cd6dd415b2ad4bf696762e3d907dd00b/1116323d3397463b8f59ca7bbc07d37e/%E5%BA%83%E5%91%8A%E9%81%8B%E7%94%A81.jpg"/><span><small>01 · FOUNDATION</small><b>服务基建</b><em>专业团队 · 影像交付 · 产业服务</em></span></article>
-<article><img alt="AI 商品创意内容" loading="lazy" src="https://www.apohem.se/cdn-cgi/image/width%3D414%2Cformat%3Dauto/contentassets/6104e81c4bcc42128757c99ae5cb3c15/m-hero-1080x1080-beauty-weeks-v.14-15.jpg"/><span><small>02 · TECHNOLOGY</small><b>AI 技术跃升</b><em>商品素材 · Agent 工作流 · 内容生产</em></span></article>
-<article><img alt="电商履约与商品协作" loading="lazy" src="https://gunpowdr.com/featured-030626-54.webp"/><span><small>03 · ECOSYSTEM</small><b>生态商业协作</b><em>源头货盘 · 经营渠道 · 创作者推广</em></span></article>
-</div><div class="growth-journey-labels"><span>服务基建 <b>→</b></span><span>AI 技术跃升 <b>→</b></span><span>生态商业变现</span></div>
-<div class="platform-timeline-wrap">
-<div class="platform-timeline-track"><article class="platform-timeline-card"><small>2018 · COMPANY</small><b>公司成立</b><p>福建星美夸克数字科技有限公司成立，开启传媒内容与电商服务领域的长期积累。</p><span class="timeline-tag">企业创立</span></article>
-<article class="platform-timeline-card"><small>2019 · R&amp;D</small><b>AI 平台研发立项</b><p>9 月启动 WOOWU 挖物 AI 营销平台研发，探索技术与电商场景的结合。</p><span class="timeline-tag">技术研发</span></article>
-<article class="platform-timeline-card"><small>2022 · PLATFORM</small><b>生态功能构建</b><p>挖物电商平台进入生态功能板块构建阶段，为服务、技术与商品连接做平台准备。</p><span class="timeline-tag">平台搭建</span></article>
-<article class="platform-timeline-card"><small>2023 · DATA FOUNDATION</small><b>平台内测与数据库建设</b><p>开展平台生态内测，启动素材数据库研发与平台搭建，持续沉淀电商场景内容与数据基础。</p><span class="timeline-tag">平台与数据</span></article>
-<article class="platform-timeline-card"><small>2023—2025 · SERVICE</small><b>电商服务体系建设</b><p>围绕商品影像、企业宣推、视觉设计与运营陪跑，完善服务流程和产业带本地化交付；2024 年 AI 营销功能上线。</p><span class="timeline-tag">服务基建</span></article>
-<article class="platform-timeline-card"><small>2025—2026 · AI AGENT</small><b>AI Agent 工作流升级</b><p>从单点创作工具向 Agent 工作流升级，衔接商品素材输入、需求理解、创意组织与内容输出。</p><span class="timeline-tag">技术跃升</span></article>
-<article class="platform-timeline-card"><small>2025—2026 · COMMERCE</small><b>选品商城与生态协作</b><p>推进选品商城建设，探索源头货盘、AI 内容与创作者推广场景之间的连接方式。</p><span class="timeline-tag">商品与分销</span></article></div>
-</div>
-<p class="growth-note">注：发展节点根据路演材料与商业计划材料整理；涉及阶段规划、商业模式设计或持续建设的内容，不代表所有环节已全面打通，也不构成未来经营承诺，具体以平台实际运营为准。</p>
-</article>
-</div>
-</div>
-</div>
-</section>
-<section class="section partners partners-refined" id="partners">
-<div class="container">
+<article class="about-panel about-partners-panel" data-about-panel="3" id="about-partners">
+<div class="about-panel-top"><span>03 / INDUSTRY COLLABORATION</span><i>产业协作 · 合作伙伴</i></div>
 <div class="partner-head reveal">
-<div><div class="eyebrow">产业协作 · 合作伙伴</div><h2 class="section-title">携手合作伙伴，<br/><em>共同服务电商场景。</em></h2><p class="section-lead">从产业资源到平台协作，让专业内容、商品供给与推广需求在更多电商场景中彼此连接。</p></div>
+<div><div class="eyebrow">产业协作 · 合作伙伴</div><h2 class="section-title">携手品牌客户，<br/><em>共创增长。</em></h2><p class="section-lead">从产业资源到平台协作，让专业内容、商品供给与推广需求在更多电商场景中彼此连接。</p></div>
 <div class="partner-network-note"><span class="partner-count-dot"></span><b>OPEN ECOSYSTEM</b><small>持续拓展的产业合作网络</small></div>
 </div>
 <div aria-label="挖物合作伙伴品牌标识自动轮播" class="partner-marquee partner-marquee-single reveal">
@@ -1801,11 +2313,34 @@ a,button,[role="button"]{cursor:pointer}
 </div></div>
 </div>
 <div class="partner-simple-note"><span>产业资源</span><i></i><span>内容协同</span><i></i><span>商品连接</span></div>
+</article>
+<article class="about-panel about-growth-panel" data-about-panel="4" id="about-growth">
+<div class="about-panel-top"><span>04 / PLATFORM DEVELOPMENT</span><i>服务 · 技术 · 生态</i></div>
+<div class="about-panel-heading"><h3>从服务基建到生态商业变现，<em>持续推进平台模式闭环。</em></h3><p>从真实项目服务积累开始，逐步建设平台、沉淀商品与内容数据，再把 AI 创作能力和商品推广场景连接起来。每个阶段都对应具体能力建设，而不是脱离业务的技术概念。</p></div>
+<div class="timeline-visual-triptych">
+<article><img alt="专业电商服务拍摄" loading="lazy" src="https://images.microcms-assets.io/assets/cd6dd415b2ad4bf696762e3d907dd00b/1116323d3397463b8f59ca7bbc07d37e/%E5%BA%83%E5%91%8A%E9%81%8B%E7%94%A81.jpg"/><span><small>01 · FOUNDATION</small><b>服务基建</b><em>专业团队 · 影像交付 · 产业服务</em></span></article>
+<article><img alt="AI 商品创意内容" loading="lazy" src="https://www.apohem.se/cdn-cgi/image/width%3D414%2Cformat%3Dauto/contentassets/6104e81c4bcc42128757c99ae5cb3c15/m-hero-1080x1080-beauty-weeks-v.14-15.jpg"/><span><small>02 · TECHNOLOGY</small><b>AI 技术跃升</b><em>商品素材 · Agent 工作流 · 内容生产</em></span></article>
+<article><img alt="电商履约与商品协作" loading="lazy" src="https://gunpowdr.com/featured-030626-54.webp"/><span><small>03 · ECOSYSTEM</small><b>生态商业协作</b><em>源头货盘 · 经营渠道 · 创作者推广</em></span></article>
+</div><div class="growth-journey-labels"><span>服务基建 <b>→</b></span><span>AI 技术跃升 <b>→</b></span><span>生态商业变现</span></div>
+<div class="platform-timeline-wrap" data-platform-timeline aria-label="挖物平台发展时间线自动轮播">
+<div class="platform-timeline-track"><article class="platform-timeline-card"><small>2018 · COMPANY</small><b>公司成立</b><p>福建星美夸克数字科技有限公司成立，开启传媒内容与电商服务领域的长期积累。</p><span class="timeline-tag">企业创立</span></article>
+<article class="platform-timeline-card"><small>2019 · R&amp;D</small><b>AI 平台研发立项</b><p>9 月启动 WOOWU 挖物 AI 营销平台研发，探索技术与电商场景的结合。</p><span class="timeline-tag">技术研发</span></article>
+<article class="platform-timeline-card"><small>2022 · PLATFORM</small><b>生态功能构建</b><p>挖物电商平台进入生态功能板块构建阶段，为服务、技术与商品连接做平台准备。</p><span class="timeline-tag">平台搭建</span></article>
+<article class="platform-timeline-card"><small>2023 · DATA FOUNDATION</small><b>平台内测与数据库建设</b><p>开展平台生态内测，启动素材数据库研发与平台搭建，持续沉淀电商场景内容与数据基础。</p><span class="timeline-tag">平台与数据</span></article>
+<article class="platform-timeline-card"><small>2023—2025 · SERVICE</small><b>电商服务体系建设</b><p>围绕商品影像、企业宣推、视觉设计与运营陪跑，完善服务流程和产业带本地化交付；2024 年 AI 营销功能上线。</p><span class="timeline-tag">服务基建</span></article>
+<article class="platform-timeline-card"><small>2025—2026 · AI AGENT</small><b>AI Agent 工作流升级</b><p>从单点创作工具向 Agent 工作流升级，衔接商品素材输入、需求理解、创意组织与内容输出。</p><span class="timeline-tag">技术跃升</span></article>
+<article class="platform-timeline-card"><small>2025—2026 · COMMERCE</small><b>选品商城与生态协作</b><p>推进选品商城建设，探索源头货盘、AI 内容与创作者推广场景之间的连接方式。</p><span class="timeline-tag">商品与分销</span></article></div>
+</div>
+<div class="timeline-autoplay-meta" aria-hidden="true"><span>WOOWU · MILESTONES</span><div class="timeline-autoplay-progress"><i></i></div><span>一路积累 · 持续进化</span></div>
+</article>
+</div>
+</div>
 </div>
 </section>
+
 <section class="section faq" id="faq">
 <div class="container faq-layout">
-<div class="faq-intro reveal"><div class="eyebrow">FAQ · 常见问题</div><h2 class="section-title">关于挖物，<br/>你可能还想了解。</h2><p>关于业务边界、服务内容与合作方式的常见问题，先在这里找到答案。</p><a class="btn btn-line" href="https://www.woowuclub.com/" rel="noopener" target="_blank">访问挖物官网 <span class="arrow">↗</span></a></div>
+<div class="faq-intro reveal"><div class="eyebrow">FAQ · 常见问题</div><h2 class="section-title">关于<span class="faq-brand-highlight">挖物</span>，<br/>你可能还想了解。</h2><p>关于业务边界、服务内容与合作方式的常见问题，先在这里找到答案。</p><a class="btn btn-line" href="https://www.woowuclub.com/" rel="noopener" target="_blank">访问挖物官网 <span class="arrow">↗</span></a></div>
 <div class="faq-list reveal reveal-delay-1">
 <div class="faq-item open"><button aria-expanded="true" class="faq-question">挖物主要提供哪些业务？<span class="plus">+</span></button><div class="faq-answer"><div><p>挖物垂直服务电商行业，主要包括电商服务、AI营销与选品商城三项业务，分别对应专业内容制作、AI内容创作和商品供给与推广连接。</p></div></div></div>
 <div class="faq-item"><button aria-expanded="false" class="faq-question">电商服务包含什么内容？<span class="plus">+</span></button><div class="faq-answer"><div><p>服务内容包括商品拍摄、商品短视频、电商设计、企业宣传视频、工厂实拍视频等，可根据商品与企业的实际需求沟通具体方案。</p></div></div></div>
@@ -1817,40 +2352,34 @@ a,button,[role="button"]{cursor:pointer}
 </div>
 </div>
 </section>
-<section class="download-app" id="download">
-<div class="container download-app-inner">
-<div class="download-copy reveal">
-<div class="eyebrow">WOOWU AI AGENT · CLIENT APP</div>
-<h2>让商品创作，<em>从一个工作台开始。</em></h2>
-<p>挖物 AI Agent 客户端正在规划中。未来将围绕商品素材、智能创作与电商内容工作流，提供更连贯的使用体验。</p>
-<div class="download-actions"><button class="btn btn-disabled" disabled="" type="button"><span class="download-pulse"></span>客户端即将开放下载</button><a class="btn btn-line" href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank">先体验在线版 <span class="arrow">↗</span></a></div>
-<small>下载版本、系统要求与开放时间以官方公告为准。</small>
-</div>
-<div aria-hidden="true" class="download-visual reveal reveal-delay-2">
-<div class="download-orbit orbit-one"></div><div class="download-orbit orbit-two"></div>
-<div class="download-device"><div class="download-device-top"><span>WOOWU</span><i></i><i></i><i></i></div><div class="download-device-main"><div class="download-device-symbol">物</div><b>AI AGENT</b><small>商品创作工作台</small><div class="download-device-line"></div><div class="download-device-line short"></div><div class="download-device-pills"><i>商品图</i><i>视频</i><i>Agent</i></div></div></div>
-<span class="download-float float-a">商品理解</span><span class="download-float float-b">智能创作</span><span class="download-float float-c">内容输出</span>
-</div>
-</div>
-</section>
+
 </main>
+<section class="client-launch" aria-labelledby="client-launch-title"><div class="client-launch-inner"><div class="client-launch-eyebrow">WOOWU AI · CREATION WORKSPACE</div><h2 id="client-launch-title">立即体验挖物 AI</h2><p>开启你的电商智能创作体验。</p><div class="client-launch-options"><a class="client-download-btn" href="https://wa.woowuclub.com/home/" target="_blank" rel="noopener"><span class="client-icon">W</span><b>Windows 桌面端 <i>↗</i></b></a><a class="client-download-btn" href="https://wa.woowuclub.com/home/" target="_blank" rel="noopener"><span class="client-icon">M</span><b>macOS 桌面端 <i>↗</i></b></a><a class="client-web-btn" href="https://wa.woowuclub.com/home/" target="_blank" rel="noopener"><b>网页版 <i>↗</i></b></a></div><div class="client-launch-foot"><span>Windows 10 或更高版本</span><span>macOS 12 或更高版本</span><span>无需安装，登录即可创作，适合临时处理与共享设备场景</span></div></div></section>
 <footer class="site-footer footer-rebuilt" id="contact">
 <div class="container">
 <div class="footer-service-cta">
 <div><div class="eyebrow">联系挖物 · 服务与合作</div><h2>让专业服务，<em>成为经营的助力。</em></h2><p>电商内容制作、AI 创作工具或商品供给合作，欢迎联系挖物团队。</p></div>
 <a class="footer-hotline" href="tel:4008012518"><small>全国客服热线</small><b>400-8012-518</b><span>联系挖物 ↗</span></a>
 </div>
-<div class="footer-main footer-main-rebuilt">
+<div class="footer-main footer-main-rebuilt footer-main-unified">
 <div class="footer-brand"><img alt="挖物 WOOWU" onerror="this.style.display='none'" src="https://static-woowuai.woowuclub.com/web-static/images/xmkk/woowu-logo-full.png"/><p>挖物，垂直服务电商行业。以电商服务、AI 营销与选品商城，连接内容生产、智能创作和商品供给。</p><a class="footer-website" href="https://www.woowuclub.com/" rel="noopener" target="_blank">www.woowuclub.com ↗</a></div>
 <div class="footer-col"><h3>业务入口</h3><a href="https://serve.woowuclub.com/" rel="noopener" target="_blank">电商服务 ↗</a><a href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank">AI 营销 ↗</a><a href="https://baodan.woowuclub.com/" rel="noopener" target="_blank">选品商城 ↗</a><a href="#about">认识挖物</a><a href="#about-growth">发展路径</a></div>
-<div class="footer-col footer-feature-col"><h3>产品功能</h3><a href="#service">电商服务能力</a><a href="#ai">AI Agent</a><a href="#ai">AI 生图 / AI 视频</a><a href="#ai">Canvas 创作画布</a><a href="#mall">选品商城与商品连接</a><h3 class="footer-subheading">资源支持</h3><a href="https://wa.woowuclub.com/home/">使用教程</a><a href="#ai">案例库</a><a href="#contact-brand">品牌共创 / API 接入</a><a href="#contact-custom">企业定制 / 版本更新</a></div>
-<div class="footer-col footer-address-col"><h3>办公地址</h3><p><b>福建总部</b>福州市晋安区福兴大道7号福州数字内容产业园7号楼514-601</p><p class="footer-address-note">如需到访或安排项目沟通，请提前联系挖物服务团队。</p></div>
-
+<div class="footer-col"><h3>产品功能</h3><a href="#service">电商服务能力</a><a href="#ai">AI Agent</a><a href="#ai">AI 生图 / AI 视频</a><a href="#ai">Canvas 创作画布</a><a href="#mall">选品商城与商品连接</a></div>
+<div class="footer-col"><h3>资源支持</h3><a href="https://wa.woowuclub.com/home/" rel="noopener" target="_blank">使用教程</a><a href="#ai">案例库</a><a href="#contact-brand">品牌共创 / API 接入</a><a href="#contact-custom">企业定制 / 版本更新</a></div>
+<div class="footer-col footer-address-col"><div class="footer-address-heading"><h3>办公地址</h3><span>WOOWU · LOCATIONS</span></div><div class="footer-address-grid footer-address-hover-grid">
+<p tabindex="0" data-address="福州市晋安区福兴大道7号福州数字内容产业园7号楼514-601"><b>福建总部</b></p>
+<p tabindex="0" data-address="晋安区福兴大道7号云创智慧产业园7号楼C栋5层514-515室"><b>福州云创</b></p>
+<p tabindex="0" data-address="禅城区朝安北路15号星河云颂府3座1502"><b>佛山</b></p>
+<p tabindex="0" data-address="白云区白云大道北华业云谷C栋402"><b>广州</b></p>
+<p tabindex="0" data-address="中山市小榄镇金融中心1104"><b>中山</b></p>
+<p tabindex="0" data-address="海口市龙华区城西镇椰海大道321号现代大厦一、三、四、八层"><b>海南</b></p>
+<p class="footer-address-overseas" tabindex="0" data-address="CARNELIAN OFFICE CT1-3806, Pulau Satu, 81550, Gelang Patah, Johor Darul Takzim, Malaysia"><b>海外公司（马来西亚）</b></p>
+</div></div>
 </div>
 <div class="footer-social-row">
 <div class="footer-company-name">WOOWU 挖物 · AI 全域电商服务平台</div>
 <div aria-label="挖物官方社交账号" class="footer-socials">
-<div class="wechat-social-wrap"><button aria-expanded="false" class="social-chip wechat-chip" type="button"><span class="social-symbol">微</span><span>微信公众号</span><b>＋</b></button><div class="wechat-qr-popover"><img alt="挖物微信公众号二维码" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="img/wechat-qr.png"/><div class="wechat-qr-placeholder">请将公众号二维码<br/>命名为 <b>wechat-qr.png</b><br/>放入 img 文件夹</div><small>扫码关注挖物官方公众号</small></div></div>
+<div class="wechat-social-wrap"><button aria-expanded="false" class="social-chip wechat-chip" type="button"><span class="social-symbol">微</span><span>微信公众号</span><b>＋</b></button><div class="wechat-qr-popover"><img alt="挖物微信公众号二维码" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="img/wechat-qr.png"/><div class="wechat-qr-placeholder">公众号二维码暂未配置</div><small>扫码关注挖物官方公众号</small></div></div>
 <a class="social-chip" href="https://v.douyin.com/acjZXrXGZY4/" rel="noopener" target="_blank"><span class="social-symbol">抖</span><span>抖音</span><b>↗</b></a>
 <a class="social-chip" href="https://xhslink.cn/o/7iDpOt7W9kf" rel="noopener" target="_blank"><span class="social-symbol">书</span><span>小红书</span><b>↗</b></a>
 <a class="social-chip" href="https://v.kuaishou.com/J9Wti3uR" rel="noopener" target="_blank"><span class="social-symbol">快</span><span>快手</span><b>↗</b></a>
@@ -1859,6 +2388,8 @@ a,button,[role="button"]{cursor:pointer}
 <div class="footer-bottom"><span>© 2026 WOOWU 挖物 · 福建星美夸克数字科技有限公司</span><span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">闽ICP备2022017337号-2 ↗</a></span></div>
 </div>
 </footer>
+
+
 <button aria-label="返回顶部" class="back-top" id="backTop">↑</button>
 <script>
 (()=>{
@@ -1990,6 +2521,44 @@ document.querySelectorAll('.eco-card,.time-content').forEach(card=>card.addEvent
 })();
 </script>
 <script id="woowu-photo-carousel-script">
+
+// Platform development timeline: automatic, seamless carousel; pauses on hover/focus and for reduced-motion preferences.
+document.querySelectorAll('[data-platform-timeline]').forEach(viewport=>{
+ const track=viewport.querySelector('.platform-timeline-track');
+ const progress=viewport.parentElement.querySelector('.timeline-autoplay-progress i');
+ if(!track)return;
+ const originals=[...track.children];if(originals.length<2)return;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+ let index=0,timer=null,raf=null,started=0,paused=false,step=0,visible=1;
+ const measure=()=>{
+  const first=originals[0],second=originals[1];if(!first||!second)return;
+  step=second.offsetLeft-first.offsetLeft;
+  visible=Math.max(1,Math.ceil(viewport.clientWidth/Math.max(1,step)));
+  track.querySelectorAll('[data-timeline-clone]').forEach(el=>el.remove());
+  originals.slice(0,Math.min(visible+1,originals.length)).forEach(card=>{const clone=card.cloneNode(true);clone.setAttribute('data-timeline-clone','');clone.setAttribute('aria-hidden','true');track.appendChild(clone)});
+  index=0;track.style.transition='none';track.style.transform='translate3d(0,0,0)';
+  originals.forEach((card,i)=>card.classList.toggle('is-current',i===0));
+  requestAnimationFrame(()=>{track.style.transition='';});
+ };
+ const paintProgress=()=>{if(!progress)return;const elapsed=Math.min(1,(performance.now()-started)/4300);progress.style.width=(elapsed*100)+'%';if(elapsed<1&&!paused)raf=requestAnimationFrame(paintProgress)};
+ const advance=()=>{
+  if(paused||reduce.matches||document.hidden)return;
+  index++;
+  track.style.transition='transform .75s cubic-bezier(.22,.75,.25,1)';
+  track.style.transform=`translate3d(${-index*step}px,0,0)`;
+  originals.forEach((card,i)=>card.classList.toggle('is-current',i===index%originals.length));
+  if(index>=originals.length){setTimeout(()=>{track.style.transition='none';index=0;track.style.transform='translate3d(0,0,0)';originals.forEach((card,i)=>card.classList.toggle('is-current',i===0));requestAnimationFrame(()=>{track.style.transition=''});},800)}
+  startCycle();
+ };
+ const startCycle=()=>{clearTimeout(timer);cancelAnimationFrame(raf);if(paused||reduce.matches)return;started=performance.now();if(progress)progress.style.width='0%';raf=requestAnimationFrame(paintProgress);timer=setTimeout(advance,4300)};
+ const pauseForBackground=()=>{paused=true;clearTimeout(timer);cancelAnimationFrame(raf)};
+ const resumeInForeground=()=>{if(reduce.matches)return;paused=false;startCycle()};
+ document.addEventListener('visibilitychange',()=>document.hidden?pauseForBackground():resumeInForeground());
+ if(reduce.addEventListener)reduce.addEventListener('change',()=>reduce.matches?pauseForBackground():resumeInForeground());
+ measure();if(!reduce.matches)startCycle();
+ let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{measure();startCycle()},160)},{passive:true});
+});
+
 // Three-image service carousel: auto-advances, with direct dot navigation.
 document.querySelectorAll('[data-photo-carousel]').forEach(carousel=>{
  const slides=[...carousel.querySelectorAll('.service-photo-slide')],dots=[...carousel.querySelectorAll('[data-slide-to]')];let index=0,timer=null;
@@ -1997,7 +2566,6 @@ document.querySelectorAll('[data-photo-carousel]').forEach(carousel=>{
  const start=()=>{clearInterval(timer);if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>show(index+1),4600)};
  dots.forEach((d,i)=>d.addEventListener('click',()=>{show(i);start()}));carousel.addEventListener('mouseenter',()=>clearInterval(timer));carousel.addEventListener('mouseleave',start);start();
 });
-// The official desktop installer URL has not been supplied yet; keep the CTA ready without inventing a download.
-document.querySelectorAll('[data-client-download]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const msg='请将官方 Windows 客户端安装包链接配置到此按钮后再发布。';if(window.confirm(msg))return;}));
+
 </script></body>
 </html>
